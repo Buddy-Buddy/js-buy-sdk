@@ -3,5 +3,46 @@ query($customerAccessToken: String!) {
     id
     firstName
     lastName
+    email
+    addresses {
+      edges{
+        node{
+          address1
+          address2
+          city
+          company
+          country
+          countryCodeV2
+          firstName
+          phone
+          zip
+          province
+        }
+      }
+    }
+    orders {
+      edges{
+        node {
+          cancelReason
+          canceledAt
+          currencyCode
+          currentSubtotalPrice
+          currentTotalDuties
+          currentTotalPrice
+          currentTotalTax
+          customerLocale
+          customerUrl
+          edited
+          financialStatus
+          fulfillmentStatus
+          orderNumber
+          originalTotalPrice
+          phone
+          processedAt
+          statusUrl
+          totalPriceV2
+        }
+      }
+    }
   }
 }
