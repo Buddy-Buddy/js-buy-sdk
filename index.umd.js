@@ -25,7 +25,11 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 */
 
-'use strict';
+(function (global, factory) {
+	typeof exports === 'object' && typeof module !== 'undefined' ? module.exports = factory() :
+	typeof define === 'function' && define.amd ? define(factory) :
+	(global.ShopifyBuy = factory());
+}(this, (function () { 'use strict';
 
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
   return typeof obj;
@@ -11808,5 +11812,7 @@ var Client = function () {
   return Client;
 }();
 
-module.exports = Client;
-//# sourceMappingURL=index.js.map
+return Client;
+
+})));
+//# sourceMappingURL=index.umd.js.map
