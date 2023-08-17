@@ -25,8 +25,6 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 */
 
-'use strict';
-
 var _typeof = typeof Symbol === "function" && typeof Symbol.iterator === "symbol" ? function (obj) {
   return typeof obj;
 } : function (obj) {
@@ -11808,5 +11806,5 @@ var Client = function () {
   return Client;
 }();
 
-module.exports = Client;
-//# sourceMappingURL=index.js.map
+export default Client;
+//# sourceMappingURL=index.es.js.map
