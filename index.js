@@ -2298,7 +2298,7 @@ var Config = function () {
     if (attrs.hasOwnProperty('apiVersion')) {
       this.apiVersion = attrs.apiVersion;
     } else {
-      this.apiVersion = '2022-07';
+      this.apiVersion = '2023-07';
     }
 
     if (attrs.hasOwnProperty('source')) {
@@ -2427,21 +2427,30 @@ function query(client) {
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
-    root.add("price");
-    root.add("priceV2", function (priceV2) {
-      priceV2.add("amount");
-      priceV2.add("currencyCode");
+    root.add("price", function (price) {
+      price.add("amount");
+      price.add("currencyCode");
+    });
+    root.add("price", {
+      alias: "priceV2"
+    }, function (price) {
+      price.add("amount");
+      price.add("currencyCode");
     });
     root.add("weight");
     root.add("availableForSale", {
       alias: "available"
     });
-    root.add("quantityAvailable");
     root.add("sku");
-    root.add("compareAtPrice");
-    root.add("compareAtPriceV2", function (compareAtPriceV2) {
-      compareAtPriceV2.add("amount");
-      compareAtPriceV2.add("currencyCode");
+    root.add("compareAtPrice", function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
+    });
+    root.add("compareAtPrice", {
+      alias: "compareAtPriceV2"
+    }, function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
     });
     root.add("image", function (image) {
       image.add("id");
@@ -2545,21 +2554,30 @@ function query$1(client) {
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
-    root.add("price");
-    root.add("priceV2", function (priceV2) {
-      priceV2.add("amount");
-      priceV2.add("currencyCode");
+    root.add("price", function (price) {
+      price.add("amount");
+      price.add("currencyCode");
+    });
+    root.add("price", {
+      alias: "priceV2"
+    }, function (price) {
+      price.add("amount");
+      price.add("currencyCode");
     });
     root.add("weight");
     root.add("availableForSale", {
       alias: "available"
     });
-    root.add("quantityAvailable");
     root.add("sku");
-    root.add("compareAtPrice");
-    root.add("compareAtPriceV2", function (compareAtPriceV2) {
-      compareAtPriceV2.add("amount");
-      compareAtPriceV2.add("currencyCode");
+    root.add("compareAtPrice", function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
+    });
+    root.add("compareAtPrice", {
+      alias: "compareAtPriceV2"
+    }, function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
     });
     root.add("image", function (image) {
       image.add("id");
@@ -2666,21 +2684,30 @@ function query$2(client) {
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
-    root.add("price");
-    root.add("priceV2", function (priceV2) {
-      priceV2.add("amount");
-      priceV2.add("currencyCode");
+    root.add("price", function (price) {
+      price.add("amount");
+      price.add("currencyCode");
+    });
+    root.add("price", {
+      alias: "priceV2"
+    }, function (price) {
+      price.add("amount");
+      price.add("currencyCode");
     });
     root.add("weight");
     root.add("availableForSale", {
       alias: "available"
     });
-    root.add("quantityAvailable");
     root.add("sku");
-    root.add("compareAtPrice");
-    root.add("compareAtPriceV2", function (compareAtPriceV2) {
-      compareAtPriceV2.add("amount");
-      compareAtPriceV2.add("currencyCode");
+    root.add("compareAtPrice", function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
+    });
+    root.add("compareAtPrice", {
+      alias: "compareAtPriceV2"
+    }, function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
     });
     root.add("image", function (image) {
       image.add("id");
@@ -2796,21 +2823,30 @@ function query$3(client) {
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
-    root.add("price");
-    root.add("priceV2", function (priceV2) {
-      priceV2.add("amount");
-      priceV2.add("currencyCode");
+    root.add("price", function (price) {
+      price.add("amount");
+      price.add("currencyCode");
+    });
+    root.add("price", {
+      alias: "priceV2"
+    }, function (price) {
+      price.add("amount");
+      price.add("currencyCode");
     });
     root.add("weight");
     root.add("availableForSale", {
       alias: "available"
     });
-    root.add("quantityAvailable");
     root.add("sku");
-    root.add("compareAtPrice");
-    root.add("compareAtPriceV2", function (compareAtPriceV2) {
-      compareAtPriceV2.add("amount");
-      compareAtPriceV2.add("currencyCode");
+    root.add("compareAtPrice", function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
+    });
+    root.add("compareAtPrice", {
+      alias: "compareAtPriceV2"
+    }, function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
     });
     root.add("image", function (image) {
       image.add("id");
@@ -2914,21 +2950,30 @@ function query$4(client) {
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
-    root.add("price");
-    root.add("priceV2", function (priceV2) {
-      priceV2.add("amount");
-      priceV2.add("currencyCode");
+    root.add("price", function (price) {
+      price.add("amount");
+      price.add("currencyCode");
+    });
+    root.add("price", {
+      alias: "priceV2"
+    }, function (price) {
+      price.add("amount");
+      price.add("currencyCode");
     });
     root.add("weight");
     root.add("availableForSale", {
       alias: "available"
     });
-    root.add("quantityAvailable");
     root.add("sku");
-    root.add("compareAtPrice");
-    root.add("compareAtPriceV2", function (compareAtPriceV2) {
-      compareAtPriceV2.add("amount");
-      compareAtPriceV2.add("currencyCode");
+    root.add("compareAtPrice", function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
+    });
+    root.add("compareAtPrice", {
+      alias: "compareAtPriceV2"
+    }, function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
     });
     root.add("image", function (image) {
       image.add("id");
@@ -3220,21 +3265,30 @@ function query$6(client) {
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
-    root.add("price");
-    root.add("priceV2", function (priceV2) {
-      priceV2.add("amount");
-      priceV2.add("currencyCode");
+    root.add("price", function (price) {
+      price.add("amount");
+      price.add("currencyCode");
+    });
+    root.add("price", {
+      alias: "priceV2"
+    }, function (price) {
+      price.add("amount");
+      price.add("currencyCode");
     });
     root.add("weight");
     root.add("availableForSale", {
       alias: "available"
     });
-    root.add("quantityAvailable");
     root.add("sku");
-    root.add("compareAtPrice");
-    root.add("compareAtPriceV2", function (compareAtPriceV2) {
-      compareAtPriceV2.add("amount");
-      compareAtPriceV2.add("currencyCode");
+    root.add("compareAtPrice", function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
+    });
+    root.add("compareAtPrice", {
+      alias: "compareAtPriceV2"
+    }, function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
     });
     root.add("image", function (image) {
       image.add("id");
@@ -3423,21 +3477,30 @@ function query$8(client) {
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
-    root.add("price");
-    root.add("priceV2", function (priceV2) {
-      priceV2.add("amount");
-      priceV2.add("currencyCode");
+    root.add("price", function (price) {
+      price.add("amount");
+      price.add("currencyCode");
+    });
+    root.add("price", {
+      alias: "priceV2"
+    }, function (price) {
+      price.add("amount");
+      price.add("currencyCode");
     });
     root.add("weight");
     root.add("availableForSale", {
       alias: "available"
     });
-    root.add("quantityAvailable");
     root.add("sku");
-    root.add("compareAtPrice");
-    root.add("compareAtPriceV2", function (compareAtPriceV2) {
-      compareAtPriceV2.add("amount");
-      compareAtPriceV2.add("currencyCode");
+    root.add("compareAtPrice", function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
+    });
+    root.add("compareAtPrice", {
+      alias: "compareAtPriceV2"
+    }, function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
     });
     root.add("image", function (image) {
       image.add("id");
@@ -3584,21 +3647,30 @@ function query$9(client) {
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
-    root.add("price");
-    root.add("priceV2", function (priceV2) {
-      priceV2.add("amount");
-      priceV2.add("currencyCode");
+    root.add("price", function (price) {
+      price.add("amount");
+      price.add("currencyCode");
+    });
+    root.add("price", {
+      alias: "priceV2"
+    }, function (price) {
+      price.add("amount");
+      price.add("currencyCode");
     });
     root.add("weight");
     root.add("availableForSale", {
       alias: "available"
     });
-    root.add("quantityAvailable");
     root.add("sku");
-    root.add("compareAtPrice");
-    root.add("compareAtPriceV2", function (compareAtPriceV2) {
-      compareAtPriceV2.add("amount");
-      compareAtPriceV2.add("currencyCode");
+    root.add("compareAtPrice", function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
+    });
+    root.add("compareAtPrice", {
+      alias: "compareAtPriceV2"
+    }, function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
     });
     root.add("image", function (image) {
       image.add("id");
@@ -4027,21 +4099,30 @@ function query$12(client) {
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
-    root.add("price");
-    root.add("priceV2", function (priceV2) {
-      priceV2.add("amount");
-      priceV2.add("currencyCode");
+    root.add("price", function (price) {
+      price.add("amount");
+      price.add("currencyCode");
+    });
+    root.add("price", {
+      alias: "priceV2"
+    }, function (price) {
+      price.add("amount");
+      price.add("currencyCode");
     });
     root.add("weight");
     root.add("availableForSale", {
       alias: "available"
     });
-    root.add("quantityAvailable");
     root.add("sku");
-    root.add("compareAtPrice");
-    root.add("compareAtPriceV2", function (compareAtPriceV2) {
-      compareAtPriceV2.add("amount");
-      compareAtPriceV2.add("currencyCode");
+    root.add("compareAtPrice", function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
+    });
+    root.add("compareAtPrice", {
+      alias: "compareAtPriceV2"
+    }, function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
     });
     root.add("image", function (image) {
       image.add("id");
@@ -4097,13 +4178,25 @@ function query$12(client) {
     });
   });
   spreads.AppliedGiftCardFragment = document.defineFragment("AppliedGiftCardFragment", "AppliedGiftCard", function (root) {
-    root.add("amountUsedV2", function (amountUsedV2) {
-      amountUsedV2.add("amount");
-      amountUsedV2.add("currencyCode");
+    root.add("amountUsed", function (amountUsed) {
+      amountUsed.add("amount");
+      amountUsed.add("currencyCode");
     });
-    root.add("balanceV2", function (balanceV2) {
-      balanceV2.add("amount");
-      balanceV2.add("currencyCode");
+    root.add("amountUsed", {
+      alias: "amountUsedV2"
+    }, function (amountUsed) {
+      amountUsed.add("amount");
+      amountUsed.add("currencyCode");
+    });
+    root.add("balance", function (balance) {
+      balance.add("amount");
+      balance.add("currencyCode");
+    });
+    root.add("balance", {
+      alias: "balanceV2"
+    }, function (balance) {
+      balance.add("amount");
+      balance.add("currencyCode");
     });
     root.add("presentmentAmountUsed", function (presentmentAmountUsed) {
       presentmentAmountUsed.add("amount");
@@ -4145,34 +4238,54 @@ function query$12(client) {
     root.add("ready");
     root.add("requiresShipping");
     root.add("note");
-    root.add("paymentDue");
-    root.add("paymentDueV2", function (paymentDueV2) {
-      paymentDueV2.add("amount");
-      paymentDueV2.add("currencyCode");
+    root.add("paymentDue", function (paymentDue) {
+      paymentDue.add("amount");
+      paymentDue.add("currencyCode");
+    });
+    root.add("paymentDue", {
+      alias: "paymentDueV2"
+    }, function (paymentDue) {
+      paymentDue.add("amount");
+      paymentDue.add("currencyCode");
     });
     root.add("webUrl");
     root.add("orderStatusUrl");
     root.add("taxExempt");
     root.add("taxesIncluded");
     root.add("currencyCode");
-    root.add("totalTax");
-    root.add("totalTaxV2", function (totalTaxV2) {
-      totalTaxV2.add("amount");
-      totalTaxV2.add("currencyCode");
+    root.add("totalTax", function (totalTax) {
+      totalTax.add("amount");
+      totalTax.add("currencyCode");
+    });
+    root.add("totalTax", {
+      alias: "totalTaxV2"
+    }, function (totalTax) {
+      totalTax.add("amount");
+      totalTax.add("currencyCode");
     });
     root.add("lineItemsSubtotalPrice", function (lineItemsSubtotalPrice) {
       lineItemsSubtotalPrice.add("amount");
       lineItemsSubtotalPrice.add("currencyCode");
     });
-    root.add("subtotalPrice");
-    root.add("subtotalPriceV2", function (subtotalPriceV2) {
-      subtotalPriceV2.add("amount");
-      subtotalPriceV2.add("currencyCode");
+    root.add("subtotalPrice", function (subtotalPrice) {
+      subtotalPrice.add("amount");
+      subtotalPrice.add("currencyCode");
     });
-    root.add("totalPrice");
-    root.add("totalPriceV2", function (totalPriceV2) {
-      totalPriceV2.add("amount");
-      totalPriceV2.add("currencyCode");
+    root.add("subtotalPrice", {
+      alias: "subtotalPriceV2"
+    }, function (subtotalPrice) {
+      subtotalPrice.add("amount");
+      subtotalPrice.add("currencyCode");
+    });
+    root.add("totalPrice", function (totalPrice) {
+      totalPrice.add("amount");
+      totalPrice.add("currencyCode");
+    });
+    root.add("totalPrice", {
+      alias: "totalPriceV2"
+    }, function (totalPrice) {
+      totalPrice.add("amount");
+      totalPrice.add("currencyCode");
     });
     root.add("completedAt");
     root.add("createdAt");
@@ -4201,10 +4314,15 @@ function query$12(client) {
     });
     root.add("shippingLine", function (shippingLine) {
       shippingLine.add("handle");
-      shippingLine.add("price");
-      shippingLine.add("priceV2", function (priceV2) {
-        priceV2.add("amount");
-        priceV2.add("currencyCode");
+      shippingLine.add("price", function (price) {
+        price.add("amount");
+        price.add("currencyCode");
+      });
+      shippingLine.add("price", {
+        alias: "priceV2"
+      }, function (price) {
+        price.add("amount");
+        price.add("currencyCode");
       });
       shippingLine.add("title");
     });
@@ -4216,31 +4334,56 @@ function query$12(client) {
       order.add("id");
       order.add("processedAt");
       order.add("orderNumber");
-      order.add("subtotalPrice");
-      order.add("subtotalPriceV2", function (subtotalPriceV2) {
-        subtotalPriceV2.add("amount");
-        subtotalPriceV2.add("currencyCode");
+      order.add("subtotalPrice", function (subtotalPrice) {
+        subtotalPrice.add("amount");
+        subtotalPrice.add("currencyCode");
       });
-      order.add("totalShippingPrice");
-      order.add("totalShippingPriceV2", function (totalShippingPriceV2) {
-        totalShippingPriceV2.add("amount");
-        totalShippingPriceV2.add("currencyCode");
+      order.add("subtotalPrice", {
+        alias: "subtotalPriceV2"
+      }, function (subtotalPrice) {
+        subtotalPrice.add("amount");
+        subtotalPrice.add("currencyCode");
       });
-      order.add("totalTax");
-      order.add("totalTaxV2", function (totalTaxV2) {
-        totalTaxV2.add("amount");
-        totalTaxV2.add("currencyCode");
+      order.add("totalShippingPrice", function (totalShippingPrice) {
+        totalShippingPrice.add("amount");
+        totalShippingPrice.add("currencyCode");
       });
-      order.add("totalPrice");
-      order.add("totalPriceV2", function (totalPriceV2) {
-        totalPriceV2.add("amount");
-        totalPriceV2.add("currencyCode");
+      order.add("totalShippingPrice", {
+        alias: "totalShippingPriceV2"
+      }, function (totalShippingPrice) {
+        totalShippingPrice.add("amount");
+        totalShippingPrice.add("currencyCode");
+      });
+      order.add("totalTax", function (totalTax) {
+        totalTax.add("amount");
+        totalTax.add("currencyCode");
+      });
+      order.add("totalTax", {
+        alias: "totalTaxV2"
+      }, function (totalTax) {
+        totalTax.add("amount");
+        totalTax.add("currencyCode");
+      });
+      order.add("totalPrice", function (totalPrice) {
+        totalPrice.add("amount");
+        totalPrice.add("currencyCode");
+      });
+      order.add("totalPrice", {
+        alias: "totalPriceV2"
+      }, function (totalPrice) {
+        totalPrice.add("amount");
+        totalPrice.add("currencyCode");
       });
       order.add("currencyCode");
-      order.add("totalRefunded");
-      order.add("totalRefundedV2", function (totalRefundedV2) {
-        totalRefundedV2.add("amount");
-        totalRefundedV2.add("currencyCode");
+      order.add("totalRefunded", function (totalRefunded) {
+        totalRefunded.add("amount");
+        totalRefunded.add("currencyCode");
+      });
+      order.add("totalRefunded", {
+        alias: "totalRefundedV2"
+      }, function (totalRefunded) {
+        totalRefunded.add("amount");
+        totalRefunded.add("currencyCode");
       });
       order.add("customerUrl");
       order.add("shippingAddress", function (shippingAddress) {
@@ -4327,21 +4470,30 @@ function query$13(client) {
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
-    root.add("price");
-    root.add("priceV2", function (priceV2) {
-      priceV2.add("amount");
-      priceV2.add("currencyCode");
+    root.add("price", function (price) {
+      price.add("amount");
+      price.add("currencyCode");
+    });
+    root.add("price", {
+      alias: "priceV2"
+    }, function (price) {
+      price.add("amount");
+      price.add("currencyCode");
     });
     root.add("weight");
     root.add("availableForSale", {
       alias: "available"
     });
-    root.add("quantityAvailable");
     root.add("sku");
-    root.add("compareAtPrice");
-    root.add("compareAtPriceV2", function (compareAtPriceV2) {
-      compareAtPriceV2.add("amount");
-      compareAtPriceV2.add("currencyCode");
+    root.add("compareAtPrice", function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
+    });
+    root.add("compareAtPrice", {
+      alias: "compareAtPriceV2"
+    }, function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
     });
     root.add("image", function (image) {
       image.add("id");
@@ -4397,13 +4549,25 @@ function query$13(client) {
     });
   });
   spreads.AppliedGiftCardFragment = document.defineFragment("AppliedGiftCardFragment", "AppliedGiftCard", function (root) {
-    root.add("amountUsedV2", function (amountUsedV2) {
-      amountUsedV2.add("amount");
-      amountUsedV2.add("currencyCode");
+    root.add("amountUsed", function (amountUsed) {
+      amountUsed.add("amount");
+      amountUsed.add("currencyCode");
     });
-    root.add("balanceV2", function (balanceV2) {
-      balanceV2.add("amount");
-      balanceV2.add("currencyCode");
+    root.add("amountUsed", {
+      alias: "amountUsedV2"
+    }, function (amountUsed) {
+      amountUsed.add("amount");
+      amountUsed.add("currencyCode");
+    });
+    root.add("balance", function (balance) {
+      balance.add("amount");
+      balance.add("currencyCode");
+    });
+    root.add("balance", {
+      alias: "balanceV2"
+    }, function (balance) {
+      balance.add("amount");
+      balance.add("currencyCode");
     });
     root.add("presentmentAmountUsed", function (presentmentAmountUsed) {
       presentmentAmountUsed.add("amount");
@@ -4454,34 +4618,54 @@ function query$13(client) {
     root.add("ready");
     root.add("requiresShipping");
     root.add("note");
-    root.add("paymentDue");
-    root.add("paymentDueV2", function (paymentDueV2) {
-      paymentDueV2.add("amount");
-      paymentDueV2.add("currencyCode");
+    root.add("paymentDue", function (paymentDue) {
+      paymentDue.add("amount");
+      paymentDue.add("currencyCode");
+    });
+    root.add("paymentDue", {
+      alias: "paymentDueV2"
+    }, function (paymentDue) {
+      paymentDue.add("amount");
+      paymentDue.add("currencyCode");
     });
     root.add("webUrl");
     root.add("orderStatusUrl");
     root.add("taxExempt");
     root.add("taxesIncluded");
     root.add("currencyCode");
-    root.add("totalTax");
-    root.add("totalTaxV2", function (totalTaxV2) {
-      totalTaxV2.add("amount");
-      totalTaxV2.add("currencyCode");
+    root.add("totalTax", function (totalTax) {
+      totalTax.add("amount");
+      totalTax.add("currencyCode");
+    });
+    root.add("totalTax", {
+      alias: "totalTaxV2"
+    }, function (totalTax) {
+      totalTax.add("amount");
+      totalTax.add("currencyCode");
     });
     root.add("lineItemsSubtotalPrice", function (lineItemsSubtotalPrice) {
       lineItemsSubtotalPrice.add("amount");
       lineItemsSubtotalPrice.add("currencyCode");
     });
-    root.add("subtotalPrice");
-    root.add("subtotalPriceV2", function (subtotalPriceV2) {
-      subtotalPriceV2.add("amount");
-      subtotalPriceV2.add("currencyCode");
+    root.add("subtotalPrice", function (subtotalPrice) {
+      subtotalPrice.add("amount");
+      subtotalPrice.add("currencyCode");
     });
-    root.add("totalPrice");
-    root.add("totalPriceV2", function (totalPriceV2) {
-      totalPriceV2.add("amount");
-      totalPriceV2.add("currencyCode");
+    root.add("subtotalPrice", {
+      alias: "subtotalPriceV2"
+    }, function (subtotalPrice) {
+      subtotalPrice.add("amount");
+      subtotalPrice.add("currencyCode");
+    });
+    root.add("totalPrice", function (totalPrice) {
+      totalPrice.add("amount");
+      totalPrice.add("currencyCode");
+    });
+    root.add("totalPrice", {
+      alias: "totalPriceV2"
+    }, function (totalPrice) {
+      totalPrice.add("amount");
+      totalPrice.add("currencyCode");
     });
     root.add("completedAt");
     root.add("createdAt");
@@ -4510,10 +4694,15 @@ function query$13(client) {
     });
     root.add("shippingLine", function (shippingLine) {
       shippingLine.add("handle");
-      shippingLine.add("price");
-      shippingLine.add("priceV2", function (priceV2) {
-        priceV2.add("amount");
-        priceV2.add("currencyCode");
+      shippingLine.add("price", function (price) {
+        price.add("amount");
+        price.add("currencyCode");
+      });
+      shippingLine.add("price", {
+        alias: "priceV2"
+      }, function (price) {
+        price.add("amount");
+        price.add("currencyCode");
       });
       shippingLine.add("title");
     });
@@ -4525,31 +4714,56 @@ function query$13(client) {
       order.add("id");
       order.add("processedAt");
       order.add("orderNumber");
-      order.add("subtotalPrice");
-      order.add("subtotalPriceV2", function (subtotalPriceV2) {
-        subtotalPriceV2.add("amount");
-        subtotalPriceV2.add("currencyCode");
+      order.add("subtotalPrice", function (subtotalPrice) {
+        subtotalPrice.add("amount");
+        subtotalPrice.add("currencyCode");
       });
-      order.add("totalShippingPrice");
-      order.add("totalShippingPriceV2", function (totalShippingPriceV2) {
-        totalShippingPriceV2.add("amount");
-        totalShippingPriceV2.add("currencyCode");
+      order.add("subtotalPrice", {
+        alias: "subtotalPriceV2"
+      }, function (subtotalPrice) {
+        subtotalPrice.add("amount");
+        subtotalPrice.add("currencyCode");
       });
-      order.add("totalTax");
-      order.add("totalTaxV2", function (totalTaxV2) {
-        totalTaxV2.add("amount");
-        totalTaxV2.add("currencyCode");
+      order.add("totalShippingPrice", function (totalShippingPrice) {
+        totalShippingPrice.add("amount");
+        totalShippingPrice.add("currencyCode");
       });
-      order.add("totalPrice");
-      order.add("totalPriceV2", function (totalPriceV2) {
-        totalPriceV2.add("amount");
-        totalPriceV2.add("currencyCode");
+      order.add("totalShippingPrice", {
+        alias: "totalShippingPriceV2"
+      }, function (totalShippingPrice) {
+        totalShippingPrice.add("amount");
+        totalShippingPrice.add("currencyCode");
+      });
+      order.add("totalTax", function (totalTax) {
+        totalTax.add("amount");
+        totalTax.add("currencyCode");
+      });
+      order.add("totalTax", {
+        alias: "totalTaxV2"
+      }, function (totalTax) {
+        totalTax.add("amount");
+        totalTax.add("currencyCode");
+      });
+      order.add("totalPrice", function (totalPrice) {
+        totalPrice.add("amount");
+        totalPrice.add("currencyCode");
+      });
+      order.add("totalPrice", {
+        alias: "totalPriceV2"
+      }, function (totalPrice) {
+        totalPrice.add("amount");
+        totalPrice.add("currencyCode");
       });
       order.add("currencyCode");
-      order.add("totalRefunded");
-      order.add("totalRefundedV2", function (totalRefundedV2) {
-        totalRefundedV2.add("amount");
-        totalRefundedV2.add("currencyCode");
+      order.add("totalRefunded", function (totalRefunded) {
+        totalRefunded.add("amount");
+        totalRefunded.add("currencyCode");
+      });
+      order.add("totalRefunded", {
+        alias: "totalRefundedV2"
+      }, function (totalRefunded) {
+        totalRefunded.add("amount");
+        totalRefunded.add("currencyCode");
       });
       order.add("customerUrl");
       order.add("shippingAddress", function (shippingAddress) {
@@ -4637,35 +4851,6 @@ function query$13(client) {
 
 function query$14(client) {
   var document = client.document();
-  var variables = {};
-  variables.checkoutCustomerAssociateV2 = {};
-  variables.checkoutCustomerAssociateV2.checkoutId = client.variable("checkoutId", "ID!");
-  variables.checkoutCustomerAssociateV2.customerAccessToken = client.variable("customerAccessToken", "String!");
-  document.addMutation("checkoutCustomerAssociateV2", [variables.checkoutCustomerAssociateV2.checkoutId, variables.checkoutCustomerAssociateV2.customerAccessToken], function (root) {
-    root.add("checkoutCustomerAssociateV2", {
-      args: {
-        checkoutId: variables.checkoutCustomerAssociateV2.checkoutId,
-        customerAccessToken: variables.checkoutCustomerAssociateV2.customerAccessToken
-      }
-    }, function (checkoutCustomerAssociateV2) {
-      checkoutCustomerAssociateV2.add("checkout", function (checkout) {
-        checkout.add("id");
-      });
-      checkoutCustomerAssociateV2.add("checkoutUserErrors", function (checkoutUserErrors) {
-        checkoutUserErrors.add("code");
-        checkoutUserErrors.add("field");
-        checkoutUserErrors.add("message");
-      });
-      checkoutCustomerAssociateV2.add("customer", function (customer) {
-        customer.add("id");
-      });
-    });
-  });
-  return document;
-}
-
-function query$15(client) {
-  var document = client.document();
   var spreads = {};
   var variables = {};
   variables.__defaultOperation__ = {};
@@ -4674,21 +4859,30 @@ function query$15(client) {
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
-    root.add("price");
-    root.add("priceV2", function (priceV2) {
-      priceV2.add("amount");
-      priceV2.add("currencyCode");
+    root.add("price", function (price) {
+      price.add("amount");
+      price.add("currencyCode");
+    });
+    root.add("price", {
+      alias: "priceV2"
+    }, function (price) {
+      price.add("amount");
+      price.add("currencyCode");
     });
     root.add("weight");
     root.add("availableForSale", {
       alias: "available"
     });
-    root.add("quantityAvailable");
     root.add("sku");
-    root.add("compareAtPrice");
-    root.add("compareAtPriceV2", function (compareAtPriceV2) {
-      compareAtPriceV2.add("amount");
-      compareAtPriceV2.add("currencyCode");
+    root.add("compareAtPrice", function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
+    });
+    root.add("compareAtPrice", {
+      alias: "compareAtPriceV2"
+    }, function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
     });
     root.add("image", function (image) {
       image.add("id");
@@ -4744,13 +4938,25 @@ function query$15(client) {
     });
   });
   spreads.AppliedGiftCardFragment = document.defineFragment("AppliedGiftCardFragment", "AppliedGiftCard", function (root) {
-    root.add("amountUsedV2", function (amountUsedV2) {
-      amountUsedV2.add("amount");
-      amountUsedV2.add("currencyCode");
+    root.add("amountUsed", function (amountUsed) {
+      amountUsed.add("amount");
+      amountUsed.add("currencyCode");
     });
-    root.add("balanceV2", function (balanceV2) {
-      balanceV2.add("amount");
-      balanceV2.add("currencyCode");
+    root.add("amountUsed", {
+      alias: "amountUsedV2"
+    }, function (amountUsed) {
+      amountUsed.add("amount");
+      amountUsed.add("currencyCode");
+    });
+    root.add("balance", function (balance) {
+      balance.add("amount");
+      balance.add("currencyCode");
+    });
+    root.add("balance", {
+      alias: "balanceV2"
+    }, function (balance) {
+      balance.add("amount");
+      balance.add("currencyCode");
     });
     root.add("presentmentAmountUsed", function (presentmentAmountUsed) {
       presentmentAmountUsed.add("amount");
@@ -4801,34 +5007,54 @@ function query$15(client) {
     root.add("ready");
     root.add("requiresShipping");
     root.add("note");
-    root.add("paymentDue");
-    root.add("paymentDueV2", function (paymentDueV2) {
-      paymentDueV2.add("amount");
-      paymentDueV2.add("currencyCode");
+    root.add("paymentDue", function (paymentDue) {
+      paymentDue.add("amount");
+      paymentDue.add("currencyCode");
+    });
+    root.add("paymentDue", {
+      alias: "paymentDueV2"
+    }, function (paymentDue) {
+      paymentDue.add("amount");
+      paymentDue.add("currencyCode");
     });
     root.add("webUrl");
     root.add("orderStatusUrl");
     root.add("taxExempt");
     root.add("taxesIncluded");
     root.add("currencyCode");
-    root.add("totalTax");
-    root.add("totalTaxV2", function (totalTaxV2) {
-      totalTaxV2.add("amount");
-      totalTaxV2.add("currencyCode");
+    root.add("totalTax", function (totalTax) {
+      totalTax.add("amount");
+      totalTax.add("currencyCode");
+    });
+    root.add("totalTax", {
+      alias: "totalTaxV2"
+    }, function (totalTax) {
+      totalTax.add("amount");
+      totalTax.add("currencyCode");
     });
     root.add("lineItemsSubtotalPrice", function (lineItemsSubtotalPrice) {
       lineItemsSubtotalPrice.add("amount");
       lineItemsSubtotalPrice.add("currencyCode");
     });
-    root.add("subtotalPrice");
-    root.add("subtotalPriceV2", function (subtotalPriceV2) {
-      subtotalPriceV2.add("amount");
-      subtotalPriceV2.add("currencyCode");
+    root.add("subtotalPrice", function (subtotalPrice) {
+      subtotalPrice.add("amount");
+      subtotalPrice.add("currencyCode");
     });
-    root.add("totalPrice");
-    root.add("totalPriceV2", function (totalPriceV2) {
-      totalPriceV2.add("amount");
-      totalPriceV2.add("currencyCode");
+    root.add("subtotalPrice", {
+      alias: "subtotalPriceV2"
+    }, function (subtotalPrice) {
+      subtotalPrice.add("amount");
+      subtotalPrice.add("currencyCode");
+    });
+    root.add("totalPrice", function (totalPrice) {
+      totalPrice.add("amount");
+      totalPrice.add("currencyCode");
+    });
+    root.add("totalPrice", {
+      alias: "totalPriceV2"
+    }, function (totalPrice) {
+      totalPrice.add("amount");
+      totalPrice.add("currencyCode");
     });
     root.add("completedAt");
     root.add("createdAt");
@@ -4857,10 +5083,15 @@ function query$15(client) {
     });
     root.add("shippingLine", function (shippingLine) {
       shippingLine.add("handle");
-      shippingLine.add("price");
-      shippingLine.add("priceV2", function (priceV2) {
-        priceV2.add("amount");
-        priceV2.add("currencyCode");
+      shippingLine.add("price", function (price) {
+        price.add("amount");
+        price.add("currencyCode");
+      });
+      shippingLine.add("price", {
+        alias: "priceV2"
+      }, function (price) {
+        price.add("amount");
+        price.add("currencyCode");
       });
       shippingLine.add("title");
     });
@@ -4872,31 +5103,56 @@ function query$15(client) {
       order.add("id");
       order.add("processedAt");
       order.add("orderNumber");
-      order.add("subtotalPrice");
-      order.add("subtotalPriceV2", function (subtotalPriceV2) {
-        subtotalPriceV2.add("amount");
-        subtotalPriceV2.add("currencyCode");
+      order.add("subtotalPrice", function (subtotalPrice) {
+        subtotalPrice.add("amount");
+        subtotalPrice.add("currencyCode");
       });
-      order.add("totalShippingPrice");
-      order.add("totalShippingPriceV2", function (totalShippingPriceV2) {
-        totalShippingPriceV2.add("amount");
-        totalShippingPriceV2.add("currencyCode");
+      order.add("subtotalPrice", {
+        alias: "subtotalPriceV2"
+      }, function (subtotalPrice) {
+        subtotalPrice.add("amount");
+        subtotalPrice.add("currencyCode");
       });
-      order.add("totalTax");
-      order.add("totalTaxV2", function (totalTaxV2) {
-        totalTaxV2.add("amount");
-        totalTaxV2.add("currencyCode");
+      order.add("totalShippingPrice", function (totalShippingPrice) {
+        totalShippingPrice.add("amount");
+        totalShippingPrice.add("currencyCode");
       });
-      order.add("totalPrice");
-      order.add("totalPriceV2", function (totalPriceV2) {
-        totalPriceV2.add("amount");
-        totalPriceV2.add("currencyCode");
+      order.add("totalShippingPrice", {
+        alias: "totalShippingPriceV2"
+      }, function (totalShippingPrice) {
+        totalShippingPrice.add("amount");
+        totalShippingPrice.add("currencyCode");
+      });
+      order.add("totalTax", function (totalTax) {
+        totalTax.add("amount");
+        totalTax.add("currencyCode");
+      });
+      order.add("totalTax", {
+        alias: "totalTaxV2"
+      }, function (totalTax) {
+        totalTax.add("amount");
+        totalTax.add("currencyCode");
+      });
+      order.add("totalPrice", function (totalPrice) {
+        totalPrice.add("amount");
+        totalPrice.add("currencyCode");
+      });
+      order.add("totalPrice", {
+        alias: "totalPriceV2"
+      }, function (totalPrice) {
+        totalPrice.add("amount");
+        totalPrice.add("currencyCode");
       });
       order.add("currencyCode");
-      order.add("totalRefunded");
-      order.add("totalRefundedV2", function (totalRefundedV2) {
-        totalRefundedV2.add("amount");
-        totalRefundedV2.add("currencyCode");
+      order.add("totalRefunded", function (totalRefunded) {
+        totalRefunded.add("amount");
+        totalRefunded.add("currencyCode");
+      });
+      order.add("totalRefunded", {
+        alias: "totalRefundedV2"
+      }, function (totalRefunded) {
+        totalRefunded.add("amount");
+        totalRefunded.add("currencyCode");
       });
       order.add("customerUrl");
       order.add("shippingAddress", function (shippingAddress) {
@@ -4983,7 +5239,7 @@ function query$15(client) {
   return document;
 }
 
-function query$16(client) {
+function query$15(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -4993,21 +5249,30 @@ function query$16(client) {
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
-    root.add("price");
-    root.add("priceV2", function (priceV2) {
-      priceV2.add("amount");
-      priceV2.add("currencyCode");
+    root.add("price", function (price) {
+      price.add("amount");
+      price.add("currencyCode");
+    });
+    root.add("price", {
+      alias: "priceV2"
+    }, function (price) {
+      price.add("amount");
+      price.add("currencyCode");
     });
     root.add("weight");
     root.add("availableForSale", {
       alias: "available"
     });
-    root.add("quantityAvailable");
     root.add("sku");
-    root.add("compareAtPrice");
-    root.add("compareAtPriceV2", function (compareAtPriceV2) {
-      compareAtPriceV2.add("amount");
-      compareAtPriceV2.add("currencyCode");
+    root.add("compareAtPrice", function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
+    });
+    root.add("compareAtPrice", {
+      alias: "compareAtPriceV2"
+    }, function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
     });
     root.add("image", function (image) {
       image.add("id");
@@ -5063,13 +5328,25 @@ function query$16(client) {
     });
   });
   spreads.AppliedGiftCardFragment = document.defineFragment("AppliedGiftCardFragment", "AppliedGiftCard", function (root) {
-    root.add("amountUsedV2", function (amountUsedV2) {
-      amountUsedV2.add("amount");
-      amountUsedV2.add("currencyCode");
+    root.add("amountUsed", function (amountUsed) {
+      amountUsed.add("amount");
+      amountUsed.add("currencyCode");
     });
-    root.add("balanceV2", function (balanceV2) {
-      balanceV2.add("amount");
-      balanceV2.add("currencyCode");
+    root.add("amountUsed", {
+      alias: "amountUsedV2"
+    }, function (amountUsed) {
+      amountUsed.add("amount");
+      amountUsed.add("currencyCode");
+    });
+    root.add("balance", function (balance) {
+      balance.add("amount");
+      balance.add("currencyCode");
+    });
+    root.add("balance", {
+      alias: "balanceV2"
+    }, function (balance) {
+      balance.add("amount");
+      balance.add("currencyCode");
     });
     root.add("presentmentAmountUsed", function (presentmentAmountUsed) {
       presentmentAmountUsed.add("amount");
@@ -5120,34 +5397,54 @@ function query$16(client) {
     root.add("ready");
     root.add("requiresShipping");
     root.add("note");
-    root.add("paymentDue");
-    root.add("paymentDueV2", function (paymentDueV2) {
-      paymentDueV2.add("amount");
-      paymentDueV2.add("currencyCode");
+    root.add("paymentDue", function (paymentDue) {
+      paymentDue.add("amount");
+      paymentDue.add("currencyCode");
+    });
+    root.add("paymentDue", {
+      alias: "paymentDueV2"
+    }, function (paymentDue) {
+      paymentDue.add("amount");
+      paymentDue.add("currencyCode");
     });
     root.add("webUrl");
     root.add("orderStatusUrl");
     root.add("taxExempt");
     root.add("taxesIncluded");
     root.add("currencyCode");
-    root.add("totalTax");
-    root.add("totalTaxV2", function (totalTaxV2) {
-      totalTaxV2.add("amount");
-      totalTaxV2.add("currencyCode");
+    root.add("totalTax", function (totalTax) {
+      totalTax.add("amount");
+      totalTax.add("currencyCode");
+    });
+    root.add("totalTax", {
+      alias: "totalTaxV2"
+    }, function (totalTax) {
+      totalTax.add("amount");
+      totalTax.add("currencyCode");
     });
     root.add("lineItemsSubtotalPrice", function (lineItemsSubtotalPrice) {
       lineItemsSubtotalPrice.add("amount");
       lineItemsSubtotalPrice.add("currencyCode");
     });
-    root.add("subtotalPrice");
-    root.add("subtotalPriceV2", function (subtotalPriceV2) {
-      subtotalPriceV2.add("amount");
-      subtotalPriceV2.add("currencyCode");
+    root.add("subtotalPrice", function (subtotalPrice) {
+      subtotalPrice.add("amount");
+      subtotalPrice.add("currencyCode");
     });
-    root.add("totalPrice");
-    root.add("totalPriceV2", function (totalPriceV2) {
-      totalPriceV2.add("amount");
-      totalPriceV2.add("currencyCode");
+    root.add("subtotalPrice", {
+      alias: "subtotalPriceV2"
+    }, function (subtotalPrice) {
+      subtotalPrice.add("amount");
+      subtotalPrice.add("currencyCode");
+    });
+    root.add("totalPrice", function (totalPrice) {
+      totalPrice.add("amount");
+      totalPrice.add("currencyCode");
+    });
+    root.add("totalPrice", {
+      alias: "totalPriceV2"
+    }, function (totalPrice) {
+      totalPrice.add("amount");
+      totalPrice.add("currencyCode");
     });
     root.add("completedAt");
     root.add("createdAt");
@@ -5176,10 +5473,15 @@ function query$16(client) {
     });
     root.add("shippingLine", function (shippingLine) {
       shippingLine.add("handle");
-      shippingLine.add("price");
-      shippingLine.add("priceV2", function (priceV2) {
-        priceV2.add("amount");
-        priceV2.add("currencyCode");
+      shippingLine.add("price", function (price) {
+        price.add("amount");
+        price.add("currencyCode");
+      });
+      shippingLine.add("price", {
+        alias: "priceV2"
+      }, function (price) {
+        price.add("amount");
+        price.add("currencyCode");
       });
       shippingLine.add("title");
     });
@@ -5191,31 +5493,56 @@ function query$16(client) {
       order.add("id");
       order.add("processedAt");
       order.add("orderNumber");
-      order.add("subtotalPrice");
-      order.add("subtotalPriceV2", function (subtotalPriceV2) {
-        subtotalPriceV2.add("amount");
-        subtotalPriceV2.add("currencyCode");
+      order.add("subtotalPrice", function (subtotalPrice) {
+        subtotalPrice.add("amount");
+        subtotalPrice.add("currencyCode");
       });
-      order.add("totalShippingPrice");
-      order.add("totalShippingPriceV2", function (totalShippingPriceV2) {
-        totalShippingPriceV2.add("amount");
-        totalShippingPriceV2.add("currencyCode");
+      order.add("subtotalPrice", {
+        alias: "subtotalPriceV2"
+      }, function (subtotalPrice) {
+        subtotalPrice.add("amount");
+        subtotalPrice.add("currencyCode");
       });
-      order.add("totalTax");
-      order.add("totalTaxV2", function (totalTaxV2) {
-        totalTaxV2.add("amount");
-        totalTaxV2.add("currencyCode");
+      order.add("totalShippingPrice", function (totalShippingPrice) {
+        totalShippingPrice.add("amount");
+        totalShippingPrice.add("currencyCode");
       });
-      order.add("totalPrice");
-      order.add("totalPriceV2", function (totalPriceV2) {
-        totalPriceV2.add("amount");
-        totalPriceV2.add("currencyCode");
+      order.add("totalShippingPrice", {
+        alias: "totalShippingPriceV2"
+      }, function (totalShippingPrice) {
+        totalShippingPrice.add("amount");
+        totalShippingPrice.add("currencyCode");
+      });
+      order.add("totalTax", function (totalTax) {
+        totalTax.add("amount");
+        totalTax.add("currencyCode");
+      });
+      order.add("totalTax", {
+        alias: "totalTaxV2"
+      }, function (totalTax) {
+        totalTax.add("amount");
+        totalTax.add("currencyCode");
+      });
+      order.add("totalPrice", function (totalPrice) {
+        totalPrice.add("amount");
+        totalPrice.add("currencyCode");
+      });
+      order.add("totalPrice", {
+        alias: "totalPriceV2"
+      }, function (totalPrice) {
+        totalPrice.add("amount");
+        totalPrice.add("currencyCode");
       });
       order.add("currencyCode");
-      order.add("totalRefunded");
-      order.add("totalRefundedV2", function (totalRefundedV2) {
-        totalRefundedV2.add("amount");
-        totalRefundedV2.add("currencyCode");
+      order.add("totalRefunded", function (totalRefunded) {
+        totalRefunded.add("amount");
+        totalRefunded.add("currencyCode");
+      });
+      order.add("totalRefunded", {
+        alias: "totalRefundedV2"
+      }, function (totalRefunded) {
+        totalRefunded.add("amount");
+        totalRefunded.add("currencyCode");
       });
       order.add("customerUrl");
       order.add("shippingAddress", function (shippingAddress) {
@@ -5302,7 +5629,7 @@ function query$16(client) {
   return document;
 }
 
-function query$17(client) {
+function query$16(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -5312,21 +5639,30 @@ function query$17(client) {
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
-    root.add("price");
-    root.add("priceV2", function (priceV2) {
-      priceV2.add("amount");
-      priceV2.add("currencyCode");
+    root.add("price", function (price) {
+      price.add("amount");
+      price.add("currencyCode");
+    });
+    root.add("price", {
+      alias: "priceV2"
+    }, function (price) {
+      price.add("amount");
+      price.add("currencyCode");
     });
     root.add("weight");
     root.add("availableForSale", {
       alias: "available"
     });
-    root.add("quantityAvailable");
     root.add("sku");
-    root.add("compareAtPrice");
-    root.add("compareAtPriceV2", function (compareAtPriceV2) {
-      compareAtPriceV2.add("amount");
-      compareAtPriceV2.add("currencyCode");
+    root.add("compareAtPrice", function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
+    });
+    root.add("compareAtPrice", {
+      alias: "compareAtPriceV2"
+    }, function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
     });
     root.add("image", function (image) {
       image.add("id");
@@ -5382,13 +5718,25 @@ function query$17(client) {
     });
   });
   spreads.AppliedGiftCardFragment = document.defineFragment("AppliedGiftCardFragment", "AppliedGiftCard", function (root) {
-    root.add("amountUsedV2", function (amountUsedV2) {
-      amountUsedV2.add("amount");
-      amountUsedV2.add("currencyCode");
+    root.add("amountUsed", function (amountUsed) {
+      amountUsed.add("amount");
+      amountUsed.add("currencyCode");
     });
-    root.add("balanceV2", function (balanceV2) {
-      balanceV2.add("amount");
-      balanceV2.add("currencyCode");
+    root.add("amountUsed", {
+      alias: "amountUsedV2"
+    }, function (amountUsed) {
+      amountUsed.add("amount");
+      amountUsed.add("currencyCode");
+    });
+    root.add("balance", function (balance) {
+      balance.add("amount");
+      balance.add("currencyCode");
+    });
+    root.add("balance", {
+      alias: "balanceV2"
+    }, function (balance) {
+      balance.add("amount");
+      balance.add("currencyCode");
     });
     root.add("presentmentAmountUsed", function (presentmentAmountUsed) {
       presentmentAmountUsed.add("amount");
@@ -5435,34 +5783,54 @@ function query$17(client) {
     root.add("ready");
     root.add("requiresShipping");
     root.add("note");
-    root.add("paymentDue");
-    root.add("paymentDueV2", function (paymentDueV2) {
-      paymentDueV2.add("amount");
-      paymentDueV2.add("currencyCode");
+    root.add("paymentDue", function (paymentDue) {
+      paymentDue.add("amount");
+      paymentDue.add("currencyCode");
+    });
+    root.add("paymentDue", {
+      alias: "paymentDueV2"
+    }, function (paymentDue) {
+      paymentDue.add("amount");
+      paymentDue.add("currencyCode");
     });
     root.add("webUrl");
     root.add("orderStatusUrl");
     root.add("taxExempt");
     root.add("taxesIncluded");
     root.add("currencyCode");
-    root.add("totalTax");
-    root.add("totalTaxV2", function (totalTaxV2) {
-      totalTaxV2.add("amount");
-      totalTaxV2.add("currencyCode");
+    root.add("totalTax", function (totalTax) {
+      totalTax.add("amount");
+      totalTax.add("currencyCode");
+    });
+    root.add("totalTax", {
+      alias: "totalTaxV2"
+    }, function (totalTax) {
+      totalTax.add("amount");
+      totalTax.add("currencyCode");
     });
     root.add("lineItemsSubtotalPrice", function (lineItemsSubtotalPrice) {
       lineItemsSubtotalPrice.add("amount");
       lineItemsSubtotalPrice.add("currencyCode");
     });
-    root.add("subtotalPrice");
-    root.add("subtotalPriceV2", function (subtotalPriceV2) {
-      subtotalPriceV2.add("amount");
-      subtotalPriceV2.add("currencyCode");
+    root.add("subtotalPrice", function (subtotalPrice) {
+      subtotalPrice.add("amount");
+      subtotalPrice.add("currencyCode");
     });
-    root.add("totalPrice");
-    root.add("totalPriceV2", function (totalPriceV2) {
-      totalPriceV2.add("amount");
-      totalPriceV2.add("currencyCode");
+    root.add("subtotalPrice", {
+      alias: "subtotalPriceV2"
+    }, function (subtotalPrice) {
+      subtotalPrice.add("amount");
+      subtotalPrice.add("currencyCode");
+    });
+    root.add("totalPrice", function (totalPrice) {
+      totalPrice.add("amount");
+      totalPrice.add("currencyCode");
+    });
+    root.add("totalPrice", {
+      alias: "totalPriceV2"
+    }, function (totalPrice) {
+      totalPrice.add("amount");
+      totalPrice.add("currencyCode");
     });
     root.add("completedAt");
     root.add("createdAt");
@@ -5491,10 +5859,15 @@ function query$17(client) {
     });
     root.add("shippingLine", function (shippingLine) {
       shippingLine.add("handle");
-      shippingLine.add("price");
-      shippingLine.add("priceV2", function (priceV2) {
-        priceV2.add("amount");
-        priceV2.add("currencyCode");
+      shippingLine.add("price", function (price) {
+        price.add("amount");
+        price.add("currencyCode");
+      });
+      shippingLine.add("price", {
+        alias: "priceV2"
+      }, function (price) {
+        price.add("amount");
+        price.add("currencyCode");
       });
       shippingLine.add("title");
     });
@@ -5506,31 +5879,56 @@ function query$17(client) {
       order.add("id");
       order.add("processedAt");
       order.add("orderNumber");
-      order.add("subtotalPrice");
-      order.add("subtotalPriceV2", function (subtotalPriceV2) {
-        subtotalPriceV2.add("amount");
-        subtotalPriceV2.add("currencyCode");
+      order.add("subtotalPrice", function (subtotalPrice) {
+        subtotalPrice.add("amount");
+        subtotalPrice.add("currencyCode");
       });
-      order.add("totalShippingPrice");
-      order.add("totalShippingPriceV2", function (totalShippingPriceV2) {
-        totalShippingPriceV2.add("amount");
-        totalShippingPriceV2.add("currencyCode");
+      order.add("subtotalPrice", {
+        alias: "subtotalPriceV2"
+      }, function (subtotalPrice) {
+        subtotalPrice.add("amount");
+        subtotalPrice.add("currencyCode");
       });
-      order.add("totalTax");
-      order.add("totalTaxV2", function (totalTaxV2) {
-        totalTaxV2.add("amount");
-        totalTaxV2.add("currencyCode");
+      order.add("totalShippingPrice", function (totalShippingPrice) {
+        totalShippingPrice.add("amount");
+        totalShippingPrice.add("currencyCode");
       });
-      order.add("totalPrice");
-      order.add("totalPriceV2", function (totalPriceV2) {
-        totalPriceV2.add("amount");
-        totalPriceV2.add("currencyCode");
+      order.add("totalShippingPrice", {
+        alias: "totalShippingPriceV2"
+      }, function (totalShippingPrice) {
+        totalShippingPrice.add("amount");
+        totalShippingPrice.add("currencyCode");
+      });
+      order.add("totalTax", function (totalTax) {
+        totalTax.add("amount");
+        totalTax.add("currencyCode");
+      });
+      order.add("totalTax", {
+        alias: "totalTaxV2"
+      }, function (totalTax) {
+        totalTax.add("amount");
+        totalTax.add("currencyCode");
+      });
+      order.add("totalPrice", function (totalPrice) {
+        totalPrice.add("amount");
+        totalPrice.add("currencyCode");
+      });
+      order.add("totalPrice", {
+        alias: "totalPriceV2"
+      }, function (totalPrice) {
+        totalPrice.add("amount");
+        totalPrice.add("currencyCode");
       });
       order.add("currencyCode");
-      order.add("totalRefunded");
-      order.add("totalRefundedV2", function (totalRefundedV2) {
-        totalRefundedV2.add("amount");
-        totalRefundedV2.add("currencyCode");
+      order.add("totalRefunded", function (totalRefunded) {
+        totalRefunded.add("amount");
+        totalRefunded.add("currencyCode");
+      });
+      order.add("totalRefunded", {
+        alias: "totalRefundedV2"
+      }, function (totalRefunded) {
+        totalRefunded.add("amount");
+        totalRefunded.add("currencyCode");
       });
       order.add("customerUrl");
       order.add("shippingAddress", function (shippingAddress) {
@@ -5614,7 +6012,7 @@ function query$17(client) {
   return document;
 }
 
-function query$18(client) {
+function query$17(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -5624,21 +6022,30 @@ function query$18(client) {
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
-    root.add("price");
-    root.add("priceV2", function (priceV2) {
-      priceV2.add("amount");
-      priceV2.add("currencyCode");
+    root.add("price", function (price) {
+      price.add("amount");
+      price.add("currencyCode");
+    });
+    root.add("price", {
+      alias: "priceV2"
+    }, function (price) {
+      price.add("amount");
+      price.add("currencyCode");
     });
     root.add("weight");
     root.add("availableForSale", {
       alias: "available"
     });
-    root.add("quantityAvailable");
     root.add("sku");
-    root.add("compareAtPrice");
-    root.add("compareAtPriceV2", function (compareAtPriceV2) {
-      compareAtPriceV2.add("amount");
-      compareAtPriceV2.add("currencyCode");
+    root.add("compareAtPrice", function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
+    });
+    root.add("compareAtPrice", {
+      alias: "compareAtPriceV2"
+    }, function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
     });
     root.add("image", function (image) {
       image.add("id");
@@ -5694,13 +6101,25 @@ function query$18(client) {
     });
   });
   spreads.AppliedGiftCardFragment = document.defineFragment("AppliedGiftCardFragment", "AppliedGiftCard", function (root) {
-    root.add("amountUsedV2", function (amountUsedV2) {
-      amountUsedV2.add("amount");
-      amountUsedV2.add("currencyCode");
+    root.add("amountUsed", function (amountUsed) {
+      amountUsed.add("amount");
+      amountUsed.add("currencyCode");
     });
-    root.add("balanceV2", function (balanceV2) {
-      balanceV2.add("amount");
-      balanceV2.add("currencyCode");
+    root.add("amountUsed", {
+      alias: "amountUsedV2"
+    }, function (amountUsed) {
+      amountUsed.add("amount");
+      amountUsed.add("currencyCode");
+    });
+    root.add("balance", function (balance) {
+      balance.add("amount");
+      balance.add("currencyCode");
+    });
+    root.add("balance", {
+      alias: "balanceV2"
+    }, function (balance) {
+      balance.add("amount");
+      balance.add("currencyCode");
     });
     root.add("presentmentAmountUsed", function (presentmentAmountUsed) {
       presentmentAmountUsed.add("amount");
@@ -5751,34 +6170,54 @@ function query$18(client) {
     root.add("ready");
     root.add("requiresShipping");
     root.add("note");
-    root.add("paymentDue");
-    root.add("paymentDueV2", function (paymentDueV2) {
-      paymentDueV2.add("amount");
-      paymentDueV2.add("currencyCode");
+    root.add("paymentDue", function (paymentDue) {
+      paymentDue.add("amount");
+      paymentDue.add("currencyCode");
+    });
+    root.add("paymentDue", {
+      alias: "paymentDueV2"
+    }, function (paymentDue) {
+      paymentDue.add("amount");
+      paymentDue.add("currencyCode");
     });
     root.add("webUrl");
     root.add("orderStatusUrl");
     root.add("taxExempt");
     root.add("taxesIncluded");
     root.add("currencyCode");
-    root.add("totalTax");
-    root.add("totalTaxV2", function (totalTaxV2) {
-      totalTaxV2.add("amount");
-      totalTaxV2.add("currencyCode");
+    root.add("totalTax", function (totalTax) {
+      totalTax.add("amount");
+      totalTax.add("currencyCode");
+    });
+    root.add("totalTax", {
+      alias: "totalTaxV2"
+    }, function (totalTax) {
+      totalTax.add("amount");
+      totalTax.add("currencyCode");
     });
     root.add("lineItemsSubtotalPrice", function (lineItemsSubtotalPrice) {
       lineItemsSubtotalPrice.add("amount");
       lineItemsSubtotalPrice.add("currencyCode");
     });
-    root.add("subtotalPrice");
-    root.add("subtotalPriceV2", function (subtotalPriceV2) {
-      subtotalPriceV2.add("amount");
-      subtotalPriceV2.add("currencyCode");
+    root.add("subtotalPrice", function (subtotalPrice) {
+      subtotalPrice.add("amount");
+      subtotalPrice.add("currencyCode");
     });
-    root.add("totalPrice");
-    root.add("totalPriceV2", function (totalPriceV2) {
-      totalPriceV2.add("amount");
-      totalPriceV2.add("currencyCode");
+    root.add("subtotalPrice", {
+      alias: "subtotalPriceV2"
+    }, function (subtotalPrice) {
+      subtotalPrice.add("amount");
+      subtotalPrice.add("currencyCode");
+    });
+    root.add("totalPrice", function (totalPrice) {
+      totalPrice.add("amount");
+      totalPrice.add("currencyCode");
+    });
+    root.add("totalPrice", {
+      alias: "totalPriceV2"
+    }, function (totalPrice) {
+      totalPrice.add("amount");
+      totalPrice.add("currencyCode");
     });
     root.add("completedAt");
     root.add("createdAt");
@@ -5807,10 +6246,15 @@ function query$18(client) {
     });
     root.add("shippingLine", function (shippingLine) {
       shippingLine.add("handle");
-      shippingLine.add("price");
-      shippingLine.add("priceV2", function (priceV2) {
-        priceV2.add("amount");
-        priceV2.add("currencyCode");
+      shippingLine.add("price", function (price) {
+        price.add("amount");
+        price.add("currencyCode");
+      });
+      shippingLine.add("price", {
+        alias: "priceV2"
+      }, function (price) {
+        price.add("amount");
+        price.add("currencyCode");
       });
       shippingLine.add("title");
     });
@@ -5822,31 +6266,56 @@ function query$18(client) {
       order.add("id");
       order.add("processedAt");
       order.add("orderNumber");
-      order.add("subtotalPrice");
-      order.add("subtotalPriceV2", function (subtotalPriceV2) {
-        subtotalPriceV2.add("amount");
-        subtotalPriceV2.add("currencyCode");
+      order.add("subtotalPrice", function (subtotalPrice) {
+        subtotalPrice.add("amount");
+        subtotalPrice.add("currencyCode");
       });
-      order.add("totalShippingPrice");
-      order.add("totalShippingPriceV2", function (totalShippingPriceV2) {
-        totalShippingPriceV2.add("amount");
-        totalShippingPriceV2.add("currencyCode");
+      order.add("subtotalPrice", {
+        alias: "subtotalPriceV2"
+      }, function (subtotalPrice) {
+        subtotalPrice.add("amount");
+        subtotalPrice.add("currencyCode");
       });
-      order.add("totalTax");
-      order.add("totalTaxV2", function (totalTaxV2) {
-        totalTaxV2.add("amount");
-        totalTaxV2.add("currencyCode");
+      order.add("totalShippingPrice", function (totalShippingPrice) {
+        totalShippingPrice.add("amount");
+        totalShippingPrice.add("currencyCode");
       });
-      order.add("totalPrice");
-      order.add("totalPriceV2", function (totalPriceV2) {
-        totalPriceV2.add("amount");
-        totalPriceV2.add("currencyCode");
+      order.add("totalShippingPrice", {
+        alias: "totalShippingPriceV2"
+      }, function (totalShippingPrice) {
+        totalShippingPrice.add("amount");
+        totalShippingPrice.add("currencyCode");
+      });
+      order.add("totalTax", function (totalTax) {
+        totalTax.add("amount");
+        totalTax.add("currencyCode");
+      });
+      order.add("totalTax", {
+        alias: "totalTaxV2"
+      }, function (totalTax) {
+        totalTax.add("amount");
+        totalTax.add("currencyCode");
+      });
+      order.add("totalPrice", function (totalPrice) {
+        totalPrice.add("amount");
+        totalPrice.add("currencyCode");
+      });
+      order.add("totalPrice", {
+        alias: "totalPriceV2"
+      }, function (totalPrice) {
+        totalPrice.add("amount");
+        totalPrice.add("currencyCode");
       });
       order.add("currencyCode");
-      order.add("totalRefunded");
-      order.add("totalRefundedV2", function (totalRefundedV2) {
-        totalRefundedV2.add("amount");
-        totalRefundedV2.add("currencyCode");
+      order.add("totalRefunded", function (totalRefunded) {
+        totalRefunded.add("amount");
+        totalRefunded.add("currencyCode");
+      });
+      order.add("totalRefunded", {
+        alias: "totalRefundedV2"
+      }, function (totalRefunded) {
+        totalRefunded.add("amount");
+        totalRefunded.add("currencyCode");
       });
       order.add("customerUrl");
       order.add("shippingAddress", function (shippingAddress) {
@@ -5933,7 +6402,7 @@ function query$18(client) {
   return document;
 }
 
-function query$19(client) {
+function query$18(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -5943,21 +6412,30 @@ function query$19(client) {
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
-    root.add("price");
-    root.add("priceV2", function (priceV2) {
-      priceV2.add("amount");
-      priceV2.add("currencyCode");
+    root.add("price", function (price) {
+      price.add("amount");
+      price.add("currencyCode");
+    });
+    root.add("price", {
+      alias: "priceV2"
+    }, function (price) {
+      price.add("amount");
+      price.add("currencyCode");
     });
     root.add("weight");
     root.add("availableForSale", {
       alias: "available"
     });
-    root.add("quantityAvailable");
     root.add("sku");
-    root.add("compareAtPrice");
-    root.add("compareAtPriceV2", function (compareAtPriceV2) {
-      compareAtPriceV2.add("amount");
-      compareAtPriceV2.add("currencyCode");
+    root.add("compareAtPrice", function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
+    });
+    root.add("compareAtPrice", {
+      alias: "compareAtPriceV2"
+    }, function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
     });
     root.add("image", function (image) {
       image.add("id");
@@ -6013,13 +6491,25 @@ function query$19(client) {
     });
   });
   spreads.AppliedGiftCardFragment = document.defineFragment("AppliedGiftCardFragment", "AppliedGiftCard", function (root) {
-    root.add("amountUsedV2", function (amountUsedV2) {
-      amountUsedV2.add("amount");
-      amountUsedV2.add("currencyCode");
+    root.add("amountUsed", function (amountUsed) {
+      amountUsed.add("amount");
+      amountUsed.add("currencyCode");
     });
-    root.add("balanceV2", function (balanceV2) {
-      balanceV2.add("amount");
-      balanceV2.add("currencyCode");
+    root.add("amountUsed", {
+      alias: "amountUsedV2"
+    }, function (amountUsed) {
+      amountUsed.add("amount");
+      amountUsed.add("currencyCode");
+    });
+    root.add("balance", function (balance) {
+      balance.add("amount");
+      balance.add("currencyCode");
+    });
+    root.add("balance", {
+      alias: "balanceV2"
+    }, function (balance) {
+      balance.add("amount");
+      balance.add("currencyCode");
     });
     root.add("presentmentAmountUsed", function (presentmentAmountUsed) {
       presentmentAmountUsed.add("amount");
@@ -6070,34 +6560,54 @@ function query$19(client) {
     root.add("ready");
     root.add("requiresShipping");
     root.add("note");
-    root.add("paymentDue");
-    root.add("paymentDueV2", function (paymentDueV2) {
-      paymentDueV2.add("amount");
-      paymentDueV2.add("currencyCode");
+    root.add("paymentDue", function (paymentDue) {
+      paymentDue.add("amount");
+      paymentDue.add("currencyCode");
+    });
+    root.add("paymentDue", {
+      alias: "paymentDueV2"
+    }, function (paymentDue) {
+      paymentDue.add("amount");
+      paymentDue.add("currencyCode");
     });
     root.add("webUrl");
     root.add("orderStatusUrl");
     root.add("taxExempt");
     root.add("taxesIncluded");
     root.add("currencyCode");
-    root.add("totalTax");
-    root.add("totalTaxV2", function (totalTaxV2) {
-      totalTaxV2.add("amount");
-      totalTaxV2.add("currencyCode");
+    root.add("totalTax", function (totalTax) {
+      totalTax.add("amount");
+      totalTax.add("currencyCode");
+    });
+    root.add("totalTax", {
+      alias: "totalTaxV2"
+    }, function (totalTax) {
+      totalTax.add("amount");
+      totalTax.add("currencyCode");
     });
     root.add("lineItemsSubtotalPrice", function (lineItemsSubtotalPrice) {
       lineItemsSubtotalPrice.add("amount");
       lineItemsSubtotalPrice.add("currencyCode");
     });
-    root.add("subtotalPrice");
-    root.add("subtotalPriceV2", function (subtotalPriceV2) {
-      subtotalPriceV2.add("amount");
-      subtotalPriceV2.add("currencyCode");
+    root.add("subtotalPrice", function (subtotalPrice) {
+      subtotalPrice.add("amount");
+      subtotalPrice.add("currencyCode");
     });
-    root.add("totalPrice");
-    root.add("totalPriceV2", function (totalPriceV2) {
-      totalPriceV2.add("amount");
-      totalPriceV2.add("currencyCode");
+    root.add("subtotalPrice", {
+      alias: "subtotalPriceV2"
+    }, function (subtotalPrice) {
+      subtotalPrice.add("amount");
+      subtotalPrice.add("currencyCode");
+    });
+    root.add("totalPrice", function (totalPrice) {
+      totalPrice.add("amount");
+      totalPrice.add("currencyCode");
+    });
+    root.add("totalPrice", {
+      alias: "totalPriceV2"
+    }, function (totalPrice) {
+      totalPrice.add("amount");
+      totalPrice.add("currencyCode");
     });
     root.add("completedAt");
     root.add("createdAt");
@@ -6126,10 +6636,15 @@ function query$19(client) {
     });
     root.add("shippingLine", function (shippingLine) {
       shippingLine.add("handle");
-      shippingLine.add("price");
-      shippingLine.add("priceV2", function (priceV2) {
-        priceV2.add("amount");
-        priceV2.add("currencyCode");
+      shippingLine.add("price", function (price) {
+        price.add("amount");
+        price.add("currencyCode");
+      });
+      shippingLine.add("price", {
+        alias: "priceV2"
+      }, function (price) {
+        price.add("amount");
+        price.add("currencyCode");
       });
       shippingLine.add("title");
     });
@@ -6141,31 +6656,56 @@ function query$19(client) {
       order.add("id");
       order.add("processedAt");
       order.add("orderNumber");
-      order.add("subtotalPrice");
-      order.add("subtotalPriceV2", function (subtotalPriceV2) {
-        subtotalPriceV2.add("amount");
-        subtotalPriceV2.add("currencyCode");
+      order.add("subtotalPrice", function (subtotalPrice) {
+        subtotalPrice.add("amount");
+        subtotalPrice.add("currencyCode");
       });
-      order.add("totalShippingPrice");
-      order.add("totalShippingPriceV2", function (totalShippingPriceV2) {
-        totalShippingPriceV2.add("amount");
-        totalShippingPriceV2.add("currencyCode");
+      order.add("subtotalPrice", {
+        alias: "subtotalPriceV2"
+      }, function (subtotalPrice) {
+        subtotalPrice.add("amount");
+        subtotalPrice.add("currencyCode");
       });
-      order.add("totalTax");
-      order.add("totalTaxV2", function (totalTaxV2) {
-        totalTaxV2.add("amount");
-        totalTaxV2.add("currencyCode");
+      order.add("totalShippingPrice", function (totalShippingPrice) {
+        totalShippingPrice.add("amount");
+        totalShippingPrice.add("currencyCode");
       });
-      order.add("totalPrice");
-      order.add("totalPriceV2", function (totalPriceV2) {
-        totalPriceV2.add("amount");
-        totalPriceV2.add("currencyCode");
+      order.add("totalShippingPrice", {
+        alias: "totalShippingPriceV2"
+      }, function (totalShippingPrice) {
+        totalShippingPrice.add("amount");
+        totalShippingPrice.add("currencyCode");
+      });
+      order.add("totalTax", function (totalTax) {
+        totalTax.add("amount");
+        totalTax.add("currencyCode");
+      });
+      order.add("totalTax", {
+        alias: "totalTaxV2"
+      }, function (totalTax) {
+        totalTax.add("amount");
+        totalTax.add("currencyCode");
+      });
+      order.add("totalPrice", function (totalPrice) {
+        totalPrice.add("amount");
+        totalPrice.add("currencyCode");
+      });
+      order.add("totalPrice", {
+        alias: "totalPriceV2"
+      }, function (totalPrice) {
+        totalPrice.add("amount");
+        totalPrice.add("currencyCode");
       });
       order.add("currencyCode");
-      order.add("totalRefunded");
-      order.add("totalRefundedV2", function (totalRefundedV2) {
-        totalRefundedV2.add("amount");
-        totalRefundedV2.add("currencyCode");
+      order.add("totalRefunded", function (totalRefunded) {
+        totalRefunded.add("amount");
+        totalRefunded.add("currencyCode");
+      });
+      order.add("totalRefunded", {
+        alias: "totalRefundedV2"
+      }, function (totalRefunded) {
+        totalRefunded.add("amount");
+        totalRefunded.add("currencyCode");
       });
       order.add("customerUrl");
       order.add("shippingAddress", function (shippingAddress) {
@@ -6252,7 +6792,7 @@ function query$19(client) {
   return document;
 }
 
-function query$20(client) {
+function query$19(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -6262,21 +6802,30 @@ function query$20(client) {
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
-    root.add("price");
-    root.add("priceV2", function (priceV2) {
-      priceV2.add("amount");
-      priceV2.add("currencyCode");
+    root.add("price", function (price) {
+      price.add("amount");
+      price.add("currencyCode");
+    });
+    root.add("price", {
+      alias: "priceV2"
+    }, function (price) {
+      price.add("amount");
+      price.add("currencyCode");
     });
     root.add("weight");
     root.add("availableForSale", {
       alias: "available"
     });
-    root.add("quantityAvailable");
     root.add("sku");
-    root.add("compareAtPrice");
-    root.add("compareAtPriceV2", function (compareAtPriceV2) {
-      compareAtPriceV2.add("amount");
-      compareAtPriceV2.add("currencyCode");
+    root.add("compareAtPrice", function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
+    });
+    root.add("compareAtPrice", {
+      alias: "compareAtPriceV2"
+    }, function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
     });
     root.add("image", function (image) {
       image.add("id");
@@ -6332,13 +6881,25 @@ function query$20(client) {
     });
   });
   spreads.AppliedGiftCardFragment = document.defineFragment("AppliedGiftCardFragment", "AppliedGiftCard", function (root) {
-    root.add("amountUsedV2", function (amountUsedV2) {
-      amountUsedV2.add("amount");
-      amountUsedV2.add("currencyCode");
+    root.add("amountUsed", function (amountUsed) {
+      amountUsed.add("amount");
+      amountUsed.add("currencyCode");
     });
-    root.add("balanceV2", function (balanceV2) {
-      balanceV2.add("amount");
-      balanceV2.add("currencyCode");
+    root.add("amountUsed", {
+      alias: "amountUsedV2"
+    }, function (amountUsed) {
+      amountUsed.add("amount");
+      amountUsed.add("currencyCode");
+    });
+    root.add("balance", function (balance) {
+      balance.add("amount");
+      balance.add("currencyCode");
+    });
+    root.add("balance", {
+      alias: "balanceV2"
+    }, function (balance) {
+      balance.add("amount");
+      balance.add("currencyCode");
     });
     root.add("presentmentAmountUsed", function (presentmentAmountUsed) {
       presentmentAmountUsed.add("amount");
@@ -6389,34 +6950,54 @@ function query$20(client) {
     root.add("ready");
     root.add("requiresShipping");
     root.add("note");
-    root.add("paymentDue");
-    root.add("paymentDueV2", function (paymentDueV2) {
-      paymentDueV2.add("amount");
-      paymentDueV2.add("currencyCode");
+    root.add("paymentDue", function (paymentDue) {
+      paymentDue.add("amount");
+      paymentDue.add("currencyCode");
+    });
+    root.add("paymentDue", {
+      alias: "paymentDueV2"
+    }, function (paymentDue) {
+      paymentDue.add("amount");
+      paymentDue.add("currencyCode");
     });
     root.add("webUrl");
     root.add("orderStatusUrl");
     root.add("taxExempt");
     root.add("taxesIncluded");
     root.add("currencyCode");
-    root.add("totalTax");
-    root.add("totalTaxV2", function (totalTaxV2) {
-      totalTaxV2.add("amount");
-      totalTaxV2.add("currencyCode");
+    root.add("totalTax", function (totalTax) {
+      totalTax.add("amount");
+      totalTax.add("currencyCode");
+    });
+    root.add("totalTax", {
+      alias: "totalTaxV2"
+    }, function (totalTax) {
+      totalTax.add("amount");
+      totalTax.add("currencyCode");
     });
     root.add("lineItemsSubtotalPrice", function (lineItemsSubtotalPrice) {
       lineItemsSubtotalPrice.add("amount");
       lineItemsSubtotalPrice.add("currencyCode");
     });
-    root.add("subtotalPrice");
-    root.add("subtotalPriceV2", function (subtotalPriceV2) {
-      subtotalPriceV2.add("amount");
-      subtotalPriceV2.add("currencyCode");
+    root.add("subtotalPrice", function (subtotalPrice) {
+      subtotalPrice.add("amount");
+      subtotalPrice.add("currencyCode");
     });
-    root.add("totalPrice");
-    root.add("totalPriceV2", function (totalPriceV2) {
-      totalPriceV2.add("amount");
-      totalPriceV2.add("currencyCode");
+    root.add("subtotalPrice", {
+      alias: "subtotalPriceV2"
+    }, function (subtotalPrice) {
+      subtotalPrice.add("amount");
+      subtotalPrice.add("currencyCode");
+    });
+    root.add("totalPrice", function (totalPrice) {
+      totalPrice.add("amount");
+      totalPrice.add("currencyCode");
+    });
+    root.add("totalPrice", {
+      alias: "totalPriceV2"
+    }, function (totalPrice) {
+      totalPrice.add("amount");
+      totalPrice.add("currencyCode");
     });
     root.add("completedAt");
     root.add("createdAt");
@@ -6445,10 +7026,15 @@ function query$20(client) {
     });
     root.add("shippingLine", function (shippingLine) {
       shippingLine.add("handle");
-      shippingLine.add("price");
-      shippingLine.add("priceV2", function (priceV2) {
-        priceV2.add("amount");
-        priceV2.add("currencyCode");
+      shippingLine.add("price", function (price) {
+        price.add("amount");
+        price.add("currencyCode");
+      });
+      shippingLine.add("price", {
+        alias: "priceV2"
+      }, function (price) {
+        price.add("amount");
+        price.add("currencyCode");
       });
       shippingLine.add("title");
     });
@@ -6460,31 +7046,56 @@ function query$20(client) {
       order.add("id");
       order.add("processedAt");
       order.add("orderNumber");
-      order.add("subtotalPrice");
-      order.add("subtotalPriceV2", function (subtotalPriceV2) {
-        subtotalPriceV2.add("amount");
-        subtotalPriceV2.add("currencyCode");
+      order.add("subtotalPrice", function (subtotalPrice) {
+        subtotalPrice.add("amount");
+        subtotalPrice.add("currencyCode");
       });
-      order.add("totalShippingPrice");
-      order.add("totalShippingPriceV2", function (totalShippingPriceV2) {
-        totalShippingPriceV2.add("amount");
-        totalShippingPriceV2.add("currencyCode");
+      order.add("subtotalPrice", {
+        alias: "subtotalPriceV2"
+      }, function (subtotalPrice) {
+        subtotalPrice.add("amount");
+        subtotalPrice.add("currencyCode");
       });
-      order.add("totalTax");
-      order.add("totalTaxV2", function (totalTaxV2) {
-        totalTaxV2.add("amount");
-        totalTaxV2.add("currencyCode");
+      order.add("totalShippingPrice", function (totalShippingPrice) {
+        totalShippingPrice.add("amount");
+        totalShippingPrice.add("currencyCode");
       });
-      order.add("totalPrice");
-      order.add("totalPriceV2", function (totalPriceV2) {
-        totalPriceV2.add("amount");
-        totalPriceV2.add("currencyCode");
+      order.add("totalShippingPrice", {
+        alias: "totalShippingPriceV2"
+      }, function (totalShippingPrice) {
+        totalShippingPrice.add("amount");
+        totalShippingPrice.add("currencyCode");
+      });
+      order.add("totalTax", function (totalTax) {
+        totalTax.add("amount");
+        totalTax.add("currencyCode");
+      });
+      order.add("totalTax", {
+        alias: "totalTaxV2"
+      }, function (totalTax) {
+        totalTax.add("amount");
+        totalTax.add("currencyCode");
+      });
+      order.add("totalPrice", function (totalPrice) {
+        totalPrice.add("amount");
+        totalPrice.add("currencyCode");
+      });
+      order.add("totalPrice", {
+        alias: "totalPriceV2"
+      }, function (totalPrice) {
+        totalPrice.add("amount");
+        totalPrice.add("currencyCode");
       });
       order.add("currencyCode");
-      order.add("totalRefunded");
-      order.add("totalRefundedV2", function (totalRefundedV2) {
-        totalRefundedV2.add("amount");
-        totalRefundedV2.add("currencyCode");
+      order.add("totalRefunded", function (totalRefunded) {
+        totalRefunded.add("amount");
+        totalRefunded.add("currencyCode");
+      });
+      order.add("totalRefunded", {
+        alias: "totalRefundedV2"
+      }, function (totalRefunded) {
+        totalRefunded.add("amount");
+        totalRefunded.add("currencyCode");
       });
       order.add("customerUrl");
       order.add("shippingAddress", function (shippingAddress) {
@@ -6571,7 +7182,7 @@ function query$20(client) {
   return document;
 }
 
-function query$21(client) {
+function query$20(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -6580,21 +7191,30 @@ function query$21(client) {
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
-    root.add("price");
-    root.add("priceV2", function (priceV2) {
-      priceV2.add("amount");
-      priceV2.add("currencyCode");
+    root.add("price", function (price) {
+      price.add("amount");
+      price.add("currencyCode");
+    });
+    root.add("price", {
+      alias: "priceV2"
+    }, function (price) {
+      price.add("amount");
+      price.add("currencyCode");
     });
     root.add("weight");
     root.add("availableForSale", {
       alias: "available"
     });
-    root.add("quantityAvailable");
     root.add("sku");
-    root.add("compareAtPrice");
-    root.add("compareAtPriceV2", function (compareAtPriceV2) {
-      compareAtPriceV2.add("amount");
-      compareAtPriceV2.add("currencyCode");
+    root.add("compareAtPrice", function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
+    });
+    root.add("compareAtPrice", {
+      alias: "compareAtPriceV2"
+    }, function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
     });
     root.add("image", function (image) {
       image.add("id");
@@ -6650,13 +7270,25 @@ function query$21(client) {
     });
   });
   spreads.AppliedGiftCardFragment = document.defineFragment("AppliedGiftCardFragment", "AppliedGiftCard", function (root) {
-    root.add("amountUsedV2", function (amountUsedV2) {
-      amountUsedV2.add("amount");
-      amountUsedV2.add("currencyCode");
+    root.add("amountUsed", function (amountUsed) {
+      amountUsed.add("amount");
+      amountUsed.add("currencyCode");
     });
-    root.add("balanceV2", function (balanceV2) {
-      balanceV2.add("amount");
-      balanceV2.add("currencyCode");
+    root.add("amountUsed", {
+      alias: "amountUsedV2"
+    }, function (amountUsed) {
+      amountUsed.add("amount");
+      amountUsed.add("currencyCode");
+    });
+    root.add("balance", function (balance) {
+      balance.add("amount");
+      balance.add("currencyCode");
+    });
+    root.add("balance", {
+      alias: "balanceV2"
+    }, function (balance) {
+      balance.add("amount");
+      balance.add("currencyCode");
     });
     root.add("presentmentAmountUsed", function (presentmentAmountUsed) {
       presentmentAmountUsed.add("amount");
@@ -6707,34 +7339,54 @@ function query$21(client) {
     root.add("ready");
     root.add("requiresShipping");
     root.add("note");
-    root.add("paymentDue");
-    root.add("paymentDueV2", function (paymentDueV2) {
-      paymentDueV2.add("amount");
-      paymentDueV2.add("currencyCode");
+    root.add("paymentDue", function (paymentDue) {
+      paymentDue.add("amount");
+      paymentDue.add("currencyCode");
+    });
+    root.add("paymentDue", {
+      alias: "paymentDueV2"
+    }, function (paymentDue) {
+      paymentDue.add("amount");
+      paymentDue.add("currencyCode");
     });
     root.add("webUrl");
     root.add("orderStatusUrl");
     root.add("taxExempt");
     root.add("taxesIncluded");
     root.add("currencyCode");
-    root.add("totalTax");
-    root.add("totalTaxV2", function (totalTaxV2) {
-      totalTaxV2.add("amount");
-      totalTaxV2.add("currencyCode");
+    root.add("totalTax", function (totalTax) {
+      totalTax.add("amount");
+      totalTax.add("currencyCode");
+    });
+    root.add("totalTax", {
+      alias: "totalTaxV2"
+    }, function (totalTax) {
+      totalTax.add("amount");
+      totalTax.add("currencyCode");
     });
     root.add("lineItemsSubtotalPrice", function (lineItemsSubtotalPrice) {
       lineItemsSubtotalPrice.add("amount");
       lineItemsSubtotalPrice.add("currencyCode");
     });
-    root.add("subtotalPrice");
-    root.add("subtotalPriceV2", function (subtotalPriceV2) {
-      subtotalPriceV2.add("amount");
-      subtotalPriceV2.add("currencyCode");
+    root.add("subtotalPrice", function (subtotalPrice) {
+      subtotalPrice.add("amount");
+      subtotalPrice.add("currencyCode");
     });
-    root.add("totalPrice");
-    root.add("totalPriceV2", function (totalPriceV2) {
-      totalPriceV2.add("amount");
-      totalPriceV2.add("currencyCode");
+    root.add("subtotalPrice", {
+      alias: "subtotalPriceV2"
+    }, function (subtotalPrice) {
+      subtotalPrice.add("amount");
+      subtotalPrice.add("currencyCode");
+    });
+    root.add("totalPrice", function (totalPrice) {
+      totalPrice.add("amount");
+      totalPrice.add("currencyCode");
+    });
+    root.add("totalPrice", {
+      alias: "totalPriceV2"
+    }, function (totalPrice) {
+      totalPrice.add("amount");
+      totalPrice.add("currencyCode");
     });
     root.add("completedAt");
     root.add("createdAt");
@@ -6763,10 +7415,15 @@ function query$21(client) {
     });
     root.add("shippingLine", function (shippingLine) {
       shippingLine.add("handle");
-      shippingLine.add("price");
-      shippingLine.add("priceV2", function (priceV2) {
-        priceV2.add("amount");
-        priceV2.add("currencyCode");
+      shippingLine.add("price", function (price) {
+        price.add("amount");
+        price.add("currencyCode");
+      });
+      shippingLine.add("price", {
+        alias: "priceV2"
+      }, function (price) {
+        price.add("amount");
+        price.add("currencyCode");
       });
       shippingLine.add("title");
     });
@@ -6778,31 +7435,56 @@ function query$21(client) {
       order.add("id");
       order.add("processedAt");
       order.add("orderNumber");
-      order.add("subtotalPrice");
-      order.add("subtotalPriceV2", function (subtotalPriceV2) {
-        subtotalPriceV2.add("amount");
-        subtotalPriceV2.add("currencyCode");
+      order.add("subtotalPrice", function (subtotalPrice) {
+        subtotalPrice.add("amount");
+        subtotalPrice.add("currencyCode");
       });
-      order.add("totalShippingPrice");
-      order.add("totalShippingPriceV2", function (totalShippingPriceV2) {
-        totalShippingPriceV2.add("amount");
-        totalShippingPriceV2.add("currencyCode");
+      order.add("subtotalPrice", {
+        alias: "subtotalPriceV2"
+      }, function (subtotalPrice) {
+        subtotalPrice.add("amount");
+        subtotalPrice.add("currencyCode");
       });
-      order.add("totalTax");
-      order.add("totalTaxV2", function (totalTaxV2) {
-        totalTaxV2.add("amount");
-        totalTaxV2.add("currencyCode");
+      order.add("totalShippingPrice", function (totalShippingPrice) {
+        totalShippingPrice.add("amount");
+        totalShippingPrice.add("currencyCode");
       });
-      order.add("totalPrice");
-      order.add("totalPriceV2", function (totalPriceV2) {
-        totalPriceV2.add("amount");
-        totalPriceV2.add("currencyCode");
+      order.add("totalShippingPrice", {
+        alias: "totalShippingPriceV2"
+      }, function (totalShippingPrice) {
+        totalShippingPrice.add("amount");
+        totalShippingPrice.add("currencyCode");
+      });
+      order.add("totalTax", function (totalTax) {
+        totalTax.add("amount");
+        totalTax.add("currencyCode");
+      });
+      order.add("totalTax", {
+        alias: "totalTaxV2"
+      }, function (totalTax) {
+        totalTax.add("amount");
+        totalTax.add("currencyCode");
+      });
+      order.add("totalPrice", function (totalPrice) {
+        totalPrice.add("amount");
+        totalPrice.add("currencyCode");
+      });
+      order.add("totalPrice", {
+        alias: "totalPriceV2"
+      }, function (totalPrice) {
+        totalPrice.add("amount");
+        totalPrice.add("currencyCode");
       });
       order.add("currencyCode");
-      order.add("totalRefunded");
-      order.add("totalRefundedV2", function (totalRefundedV2) {
-        totalRefundedV2.add("amount");
-        totalRefundedV2.add("currencyCode");
+      order.add("totalRefunded", function (totalRefunded) {
+        totalRefunded.add("amount");
+        totalRefunded.add("currencyCode");
+      });
+      order.add("totalRefunded", {
+        alias: "totalRefundedV2"
+      }, function (totalRefunded) {
+        totalRefunded.add("amount");
+        totalRefunded.add("currencyCode");
       });
       order.add("customerUrl");
       order.add("shippingAddress", function (shippingAddress) {
@@ -6888,7 +7570,7 @@ function query$21(client) {
   return document;
 }
 
-function query$22(client) {
+function query$21(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -6898,21 +7580,30 @@ function query$22(client) {
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
-    root.add("price");
-    root.add("priceV2", function (priceV2) {
-      priceV2.add("amount");
-      priceV2.add("currencyCode");
+    root.add("price", function (price) {
+      price.add("amount");
+      price.add("currencyCode");
+    });
+    root.add("price", {
+      alias: "priceV2"
+    }, function (price) {
+      price.add("amount");
+      price.add("currencyCode");
     });
     root.add("weight");
     root.add("availableForSale", {
       alias: "available"
     });
-    root.add("quantityAvailable");
     root.add("sku");
-    root.add("compareAtPrice");
-    root.add("compareAtPriceV2", function (compareAtPriceV2) {
-      compareAtPriceV2.add("amount");
-      compareAtPriceV2.add("currencyCode");
+    root.add("compareAtPrice", function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
+    });
+    root.add("compareAtPrice", {
+      alias: "compareAtPriceV2"
+    }, function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
     });
     root.add("image", function (image) {
       image.add("id");
@@ -6968,13 +7659,25 @@ function query$22(client) {
     });
   });
   spreads.AppliedGiftCardFragment = document.defineFragment("AppliedGiftCardFragment", "AppliedGiftCard", function (root) {
-    root.add("amountUsedV2", function (amountUsedV2) {
-      amountUsedV2.add("amount");
-      amountUsedV2.add("currencyCode");
+    root.add("amountUsed", function (amountUsed) {
+      amountUsed.add("amount");
+      amountUsed.add("currencyCode");
     });
-    root.add("balanceV2", function (balanceV2) {
-      balanceV2.add("amount");
-      balanceV2.add("currencyCode");
+    root.add("amountUsed", {
+      alias: "amountUsedV2"
+    }, function (amountUsed) {
+      amountUsed.add("amount");
+      amountUsed.add("currencyCode");
+    });
+    root.add("balance", function (balance) {
+      balance.add("amount");
+      balance.add("currencyCode");
+    });
+    root.add("balance", {
+      alias: "balanceV2"
+    }, function (balance) {
+      balance.add("amount");
+      balance.add("currencyCode");
     });
     root.add("presentmentAmountUsed", function (presentmentAmountUsed) {
       presentmentAmountUsed.add("amount");
@@ -7025,34 +7728,54 @@ function query$22(client) {
     root.add("ready");
     root.add("requiresShipping");
     root.add("note");
-    root.add("paymentDue");
-    root.add("paymentDueV2", function (paymentDueV2) {
-      paymentDueV2.add("amount");
-      paymentDueV2.add("currencyCode");
+    root.add("paymentDue", function (paymentDue) {
+      paymentDue.add("amount");
+      paymentDue.add("currencyCode");
+    });
+    root.add("paymentDue", {
+      alias: "paymentDueV2"
+    }, function (paymentDue) {
+      paymentDue.add("amount");
+      paymentDue.add("currencyCode");
     });
     root.add("webUrl");
     root.add("orderStatusUrl");
     root.add("taxExempt");
     root.add("taxesIncluded");
     root.add("currencyCode");
-    root.add("totalTax");
-    root.add("totalTaxV2", function (totalTaxV2) {
-      totalTaxV2.add("amount");
-      totalTaxV2.add("currencyCode");
+    root.add("totalTax", function (totalTax) {
+      totalTax.add("amount");
+      totalTax.add("currencyCode");
+    });
+    root.add("totalTax", {
+      alias: "totalTaxV2"
+    }, function (totalTax) {
+      totalTax.add("amount");
+      totalTax.add("currencyCode");
     });
     root.add("lineItemsSubtotalPrice", function (lineItemsSubtotalPrice) {
       lineItemsSubtotalPrice.add("amount");
       lineItemsSubtotalPrice.add("currencyCode");
     });
-    root.add("subtotalPrice");
-    root.add("subtotalPriceV2", function (subtotalPriceV2) {
-      subtotalPriceV2.add("amount");
-      subtotalPriceV2.add("currencyCode");
+    root.add("subtotalPrice", function (subtotalPrice) {
+      subtotalPrice.add("amount");
+      subtotalPrice.add("currencyCode");
     });
-    root.add("totalPrice");
-    root.add("totalPriceV2", function (totalPriceV2) {
-      totalPriceV2.add("amount");
-      totalPriceV2.add("currencyCode");
+    root.add("subtotalPrice", {
+      alias: "subtotalPriceV2"
+    }, function (subtotalPrice) {
+      subtotalPrice.add("amount");
+      subtotalPrice.add("currencyCode");
+    });
+    root.add("totalPrice", function (totalPrice) {
+      totalPrice.add("amount");
+      totalPrice.add("currencyCode");
+    });
+    root.add("totalPrice", {
+      alias: "totalPriceV2"
+    }, function (totalPrice) {
+      totalPrice.add("amount");
+      totalPrice.add("currencyCode");
     });
     root.add("completedAt");
     root.add("createdAt");
@@ -7081,10 +7804,15 @@ function query$22(client) {
     });
     root.add("shippingLine", function (shippingLine) {
       shippingLine.add("handle");
-      shippingLine.add("price");
-      shippingLine.add("priceV2", function (priceV2) {
-        priceV2.add("amount");
-        priceV2.add("currencyCode");
+      shippingLine.add("price", function (price) {
+        price.add("amount");
+        price.add("currencyCode");
+      });
+      shippingLine.add("price", {
+        alias: "priceV2"
+      }, function (price) {
+        price.add("amount");
+        price.add("currencyCode");
       });
       shippingLine.add("title");
     });
@@ -7096,31 +7824,56 @@ function query$22(client) {
       order.add("id");
       order.add("processedAt");
       order.add("orderNumber");
-      order.add("subtotalPrice");
-      order.add("subtotalPriceV2", function (subtotalPriceV2) {
-        subtotalPriceV2.add("amount");
-        subtotalPriceV2.add("currencyCode");
+      order.add("subtotalPrice", function (subtotalPrice) {
+        subtotalPrice.add("amount");
+        subtotalPrice.add("currencyCode");
       });
-      order.add("totalShippingPrice");
-      order.add("totalShippingPriceV2", function (totalShippingPriceV2) {
-        totalShippingPriceV2.add("amount");
-        totalShippingPriceV2.add("currencyCode");
+      order.add("subtotalPrice", {
+        alias: "subtotalPriceV2"
+      }, function (subtotalPrice) {
+        subtotalPrice.add("amount");
+        subtotalPrice.add("currencyCode");
       });
-      order.add("totalTax");
-      order.add("totalTaxV2", function (totalTaxV2) {
-        totalTaxV2.add("amount");
-        totalTaxV2.add("currencyCode");
+      order.add("totalShippingPrice", function (totalShippingPrice) {
+        totalShippingPrice.add("amount");
+        totalShippingPrice.add("currencyCode");
       });
-      order.add("totalPrice");
-      order.add("totalPriceV2", function (totalPriceV2) {
-        totalPriceV2.add("amount");
-        totalPriceV2.add("currencyCode");
+      order.add("totalShippingPrice", {
+        alias: "totalShippingPriceV2"
+      }, function (totalShippingPrice) {
+        totalShippingPrice.add("amount");
+        totalShippingPrice.add("currencyCode");
+      });
+      order.add("totalTax", function (totalTax) {
+        totalTax.add("amount");
+        totalTax.add("currencyCode");
+      });
+      order.add("totalTax", {
+        alias: "totalTaxV2"
+      }, function (totalTax) {
+        totalTax.add("amount");
+        totalTax.add("currencyCode");
+      });
+      order.add("totalPrice", function (totalPrice) {
+        totalPrice.add("amount");
+        totalPrice.add("currencyCode");
+      });
+      order.add("totalPrice", {
+        alias: "totalPriceV2"
+      }, function (totalPrice) {
+        totalPrice.add("amount");
+        totalPrice.add("currencyCode");
       });
       order.add("currencyCode");
-      order.add("totalRefunded");
-      order.add("totalRefundedV2", function (totalRefundedV2) {
-        totalRefundedV2.add("amount");
-        totalRefundedV2.add("currencyCode");
+      order.add("totalRefunded", function (totalRefunded) {
+        totalRefunded.add("amount");
+        totalRefunded.add("currencyCode");
+      });
+      order.add("totalRefunded", {
+        alias: "totalRefundedV2"
+      }, function (totalRefunded) {
+        totalRefunded.add("amount");
+        totalRefunded.add("currencyCode");
       });
       order.add("customerUrl");
       order.add("shippingAddress", function (shippingAddress) {
@@ -7207,7 +7960,7 @@ function query$22(client) {
   return document;
 }
 
-function query$23(client) {
+function query$22(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -7217,21 +7970,30 @@ function query$23(client) {
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
-    root.add("price");
-    root.add("priceV2", function (priceV2) {
-      priceV2.add("amount");
-      priceV2.add("currencyCode");
+    root.add("price", function (price) {
+      price.add("amount");
+      price.add("currencyCode");
+    });
+    root.add("price", {
+      alias: "priceV2"
+    }, function (price) {
+      price.add("amount");
+      price.add("currencyCode");
     });
     root.add("weight");
     root.add("availableForSale", {
       alias: "available"
     });
-    root.add("quantityAvailable");
     root.add("sku");
-    root.add("compareAtPrice");
-    root.add("compareAtPriceV2", function (compareAtPriceV2) {
-      compareAtPriceV2.add("amount");
-      compareAtPriceV2.add("currencyCode");
+    root.add("compareAtPrice", function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
+    });
+    root.add("compareAtPrice", {
+      alias: "compareAtPriceV2"
+    }, function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
     });
     root.add("image", function (image) {
       image.add("id");
@@ -7287,13 +8049,25 @@ function query$23(client) {
     });
   });
   spreads.AppliedGiftCardFragment = document.defineFragment("AppliedGiftCardFragment", "AppliedGiftCard", function (root) {
-    root.add("amountUsedV2", function (amountUsedV2) {
-      amountUsedV2.add("amount");
-      amountUsedV2.add("currencyCode");
+    root.add("amountUsed", function (amountUsed) {
+      amountUsed.add("amount");
+      amountUsed.add("currencyCode");
     });
-    root.add("balanceV2", function (balanceV2) {
-      balanceV2.add("amount");
-      balanceV2.add("currencyCode");
+    root.add("amountUsed", {
+      alias: "amountUsedV2"
+    }, function (amountUsed) {
+      amountUsed.add("amount");
+      amountUsed.add("currencyCode");
+    });
+    root.add("balance", function (balance) {
+      balance.add("amount");
+      balance.add("currencyCode");
+    });
+    root.add("balance", {
+      alias: "balanceV2"
+    }, function (balance) {
+      balance.add("amount");
+      balance.add("currencyCode");
     });
     root.add("presentmentAmountUsed", function (presentmentAmountUsed) {
       presentmentAmountUsed.add("amount");
@@ -7344,34 +8118,54 @@ function query$23(client) {
     root.add("ready");
     root.add("requiresShipping");
     root.add("note");
-    root.add("paymentDue");
-    root.add("paymentDueV2", function (paymentDueV2) {
-      paymentDueV2.add("amount");
-      paymentDueV2.add("currencyCode");
+    root.add("paymentDue", function (paymentDue) {
+      paymentDue.add("amount");
+      paymentDue.add("currencyCode");
+    });
+    root.add("paymentDue", {
+      alias: "paymentDueV2"
+    }, function (paymentDue) {
+      paymentDue.add("amount");
+      paymentDue.add("currencyCode");
     });
     root.add("webUrl");
     root.add("orderStatusUrl");
     root.add("taxExempt");
     root.add("taxesIncluded");
     root.add("currencyCode");
-    root.add("totalTax");
-    root.add("totalTaxV2", function (totalTaxV2) {
-      totalTaxV2.add("amount");
-      totalTaxV2.add("currencyCode");
+    root.add("totalTax", function (totalTax) {
+      totalTax.add("amount");
+      totalTax.add("currencyCode");
+    });
+    root.add("totalTax", {
+      alias: "totalTaxV2"
+    }, function (totalTax) {
+      totalTax.add("amount");
+      totalTax.add("currencyCode");
     });
     root.add("lineItemsSubtotalPrice", function (lineItemsSubtotalPrice) {
       lineItemsSubtotalPrice.add("amount");
       lineItemsSubtotalPrice.add("currencyCode");
     });
-    root.add("subtotalPrice");
-    root.add("subtotalPriceV2", function (subtotalPriceV2) {
-      subtotalPriceV2.add("amount");
-      subtotalPriceV2.add("currencyCode");
+    root.add("subtotalPrice", function (subtotalPrice) {
+      subtotalPrice.add("amount");
+      subtotalPrice.add("currencyCode");
     });
-    root.add("totalPrice");
-    root.add("totalPriceV2", function (totalPriceV2) {
-      totalPriceV2.add("amount");
-      totalPriceV2.add("currencyCode");
+    root.add("subtotalPrice", {
+      alias: "subtotalPriceV2"
+    }, function (subtotalPrice) {
+      subtotalPrice.add("amount");
+      subtotalPrice.add("currencyCode");
+    });
+    root.add("totalPrice", function (totalPrice) {
+      totalPrice.add("amount");
+      totalPrice.add("currencyCode");
+    });
+    root.add("totalPrice", {
+      alias: "totalPriceV2"
+    }, function (totalPrice) {
+      totalPrice.add("amount");
+      totalPrice.add("currencyCode");
     });
     root.add("completedAt");
     root.add("createdAt");
@@ -7400,10 +8194,15 @@ function query$23(client) {
     });
     root.add("shippingLine", function (shippingLine) {
       shippingLine.add("handle");
-      shippingLine.add("price");
-      shippingLine.add("priceV2", function (priceV2) {
-        priceV2.add("amount");
-        priceV2.add("currencyCode");
+      shippingLine.add("price", function (price) {
+        price.add("amount");
+        price.add("currencyCode");
+      });
+      shippingLine.add("price", {
+        alias: "priceV2"
+      }, function (price) {
+        price.add("amount");
+        price.add("currencyCode");
       });
       shippingLine.add("title");
     });
@@ -7415,31 +8214,56 @@ function query$23(client) {
       order.add("id");
       order.add("processedAt");
       order.add("orderNumber");
-      order.add("subtotalPrice");
-      order.add("subtotalPriceV2", function (subtotalPriceV2) {
-        subtotalPriceV2.add("amount");
-        subtotalPriceV2.add("currencyCode");
+      order.add("subtotalPrice", function (subtotalPrice) {
+        subtotalPrice.add("amount");
+        subtotalPrice.add("currencyCode");
       });
-      order.add("totalShippingPrice");
-      order.add("totalShippingPriceV2", function (totalShippingPriceV2) {
-        totalShippingPriceV2.add("amount");
-        totalShippingPriceV2.add("currencyCode");
+      order.add("subtotalPrice", {
+        alias: "subtotalPriceV2"
+      }, function (subtotalPrice) {
+        subtotalPrice.add("amount");
+        subtotalPrice.add("currencyCode");
       });
-      order.add("totalTax");
-      order.add("totalTaxV2", function (totalTaxV2) {
-        totalTaxV2.add("amount");
-        totalTaxV2.add("currencyCode");
+      order.add("totalShippingPrice", function (totalShippingPrice) {
+        totalShippingPrice.add("amount");
+        totalShippingPrice.add("currencyCode");
       });
-      order.add("totalPrice");
-      order.add("totalPriceV2", function (totalPriceV2) {
-        totalPriceV2.add("amount");
-        totalPriceV2.add("currencyCode");
+      order.add("totalShippingPrice", {
+        alias: "totalShippingPriceV2"
+      }, function (totalShippingPrice) {
+        totalShippingPrice.add("amount");
+        totalShippingPrice.add("currencyCode");
+      });
+      order.add("totalTax", function (totalTax) {
+        totalTax.add("amount");
+        totalTax.add("currencyCode");
+      });
+      order.add("totalTax", {
+        alias: "totalTaxV2"
+      }, function (totalTax) {
+        totalTax.add("amount");
+        totalTax.add("currencyCode");
+      });
+      order.add("totalPrice", function (totalPrice) {
+        totalPrice.add("amount");
+        totalPrice.add("currencyCode");
+      });
+      order.add("totalPrice", {
+        alias: "totalPriceV2"
+      }, function (totalPrice) {
+        totalPrice.add("amount");
+        totalPrice.add("currencyCode");
       });
       order.add("currencyCode");
-      order.add("totalRefunded");
-      order.add("totalRefundedV2", function (totalRefundedV2) {
-        totalRefundedV2.add("amount");
-        totalRefundedV2.add("currencyCode");
+      order.add("totalRefunded", function (totalRefunded) {
+        totalRefunded.add("amount");
+        totalRefunded.add("currencyCode");
+      });
+      order.add("totalRefunded", {
+        alias: "totalRefundedV2"
+      }, function (totalRefunded) {
+        totalRefunded.add("amount");
+        totalRefunded.add("currencyCode");
       });
       order.add("customerUrl");
       order.add("shippingAddress", function (shippingAddress) {
@@ -7526,7 +8350,7 @@ function query$23(client) {
   return document;
 }
 
-function query$24(client) {
+function query$23(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -7536,21 +8360,30 @@ function query$24(client) {
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
-    root.add("price");
-    root.add("priceV2", function (priceV2) {
-      priceV2.add("amount");
-      priceV2.add("currencyCode");
+    root.add("price", function (price) {
+      price.add("amount");
+      price.add("currencyCode");
+    });
+    root.add("price", {
+      alias: "priceV2"
+    }, function (price) {
+      price.add("amount");
+      price.add("currencyCode");
     });
     root.add("weight");
     root.add("availableForSale", {
       alias: "available"
     });
-    root.add("quantityAvailable");
     root.add("sku");
-    root.add("compareAtPrice");
-    root.add("compareAtPriceV2", function (compareAtPriceV2) {
-      compareAtPriceV2.add("amount");
-      compareAtPriceV2.add("currencyCode");
+    root.add("compareAtPrice", function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
+    });
+    root.add("compareAtPrice", {
+      alias: "compareAtPriceV2"
+    }, function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
     });
     root.add("image", function (image) {
       image.add("id");
@@ -7606,13 +8439,25 @@ function query$24(client) {
     });
   });
   spreads.AppliedGiftCardFragment = document.defineFragment("AppliedGiftCardFragment", "AppliedGiftCard", function (root) {
-    root.add("amountUsedV2", function (amountUsedV2) {
-      amountUsedV2.add("amount");
-      amountUsedV2.add("currencyCode");
+    root.add("amountUsed", function (amountUsed) {
+      amountUsed.add("amount");
+      amountUsed.add("currencyCode");
     });
-    root.add("balanceV2", function (balanceV2) {
-      balanceV2.add("amount");
-      balanceV2.add("currencyCode");
+    root.add("amountUsed", {
+      alias: "amountUsedV2"
+    }, function (amountUsed) {
+      amountUsed.add("amount");
+      amountUsed.add("currencyCode");
+    });
+    root.add("balance", function (balance) {
+      balance.add("amount");
+      balance.add("currencyCode");
+    });
+    root.add("balance", {
+      alias: "balanceV2"
+    }, function (balance) {
+      balance.add("amount");
+      balance.add("currencyCode");
     });
     root.add("presentmentAmountUsed", function (presentmentAmountUsed) {
       presentmentAmountUsed.add("amount");
@@ -7663,34 +8508,54 @@ function query$24(client) {
     root.add("ready");
     root.add("requiresShipping");
     root.add("note");
-    root.add("paymentDue");
-    root.add("paymentDueV2", function (paymentDueV2) {
-      paymentDueV2.add("amount");
-      paymentDueV2.add("currencyCode");
+    root.add("paymentDue", function (paymentDue) {
+      paymentDue.add("amount");
+      paymentDue.add("currencyCode");
+    });
+    root.add("paymentDue", {
+      alias: "paymentDueV2"
+    }, function (paymentDue) {
+      paymentDue.add("amount");
+      paymentDue.add("currencyCode");
     });
     root.add("webUrl");
     root.add("orderStatusUrl");
     root.add("taxExempt");
     root.add("taxesIncluded");
     root.add("currencyCode");
-    root.add("totalTax");
-    root.add("totalTaxV2", function (totalTaxV2) {
-      totalTaxV2.add("amount");
-      totalTaxV2.add("currencyCode");
+    root.add("totalTax", function (totalTax) {
+      totalTax.add("amount");
+      totalTax.add("currencyCode");
+    });
+    root.add("totalTax", {
+      alias: "totalTaxV2"
+    }, function (totalTax) {
+      totalTax.add("amount");
+      totalTax.add("currencyCode");
     });
     root.add("lineItemsSubtotalPrice", function (lineItemsSubtotalPrice) {
       lineItemsSubtotalPrice.add("amount");
       lineItemsSubtotalPrice.add("currencyCode");
     });
-    root.add("subtotalPrice");
-    root.add("subtotalPriceV2", function (subtotalPriceV2) {
-      subtotalPriceV2.add("amount");
-      subtotalPriceV2.add("currencyCode");
+    root.add("subtotalPrice", function (subtotalPrice) {
+      subtotalPrice.add("amount");
+      subtotalPrice.add("currencyCode");
     });
-    root.add("totalPrice");
-    root.add("totalPriceV2", function (totalPriceV2) {
-      totalPriceV2.add("amount");
-      totalPriceV2.add("currencyCode");
+    root.add("subtotalPrice", {
+      alias: "subtotalPriceV2"
+    }, function (subtotalPrice) {
+      subtotalPrice.add("amount");
+      subtotalPrice.add("currencyCode");
+    });
+    root.add("totalPrice", function (totalPrice) {
+      totalPrice.add("amount");
+      totalPrice.add("currencyCode");
+    });
+    root.add("totalPrice", {
+      alias: "totalPriceV2"
+    }, function (totalPrice) {
+      totalPrice.add("amount");
+      totalPrice.add("currencyCode");
     });
     root.add("completedAt");
     root.add("createdAt");
@@ -7719,10 +8584,15 @@ function query$24(client) {
     });
     root.add("shippingLine", function (shippingLine) {
       shippingLine.add("handle");
-      shippingLine.add("price");
-      shippingLine.add("priceV2", function (priceV2) {
-        priceV2.add("amount");
-        priceV2.add("currencyCode");
+      shippingLine.add("price", function (price) {
+        price.add("amount");
+        price.add("currencyCode");
+      });
+      shippingLine.add("price", {
+        alias: "priceV2"
+      }, function (price) {
+        price.add("amount");
+        price.add("currencyCode");
       });
       shippingLine.add("title");
     });
@@ -7734,31 +8604,56 @@ function query$24(client) {
       order.add("id");
       order.add("processedAt");
       order.add("orderNumber");
-      order.add("subtotalPrice");
-      order.add("subtotalPriceV2", function (subtotalPriceV2) {
-        subtotalPriceV2.add("amount");
-        subtotalPriceV2.add("currencyCode");
+      order.add("subtotalPrice", function (subtotalPrice) {
+        subtotalPrice.add("amount");
+        subtotalPrice.add("currencyCode");
       });
-      order.add("totalShippingPrice");
-      order.add("totalShippingPriceV2", function (totalShippingPriceV2) {
-        totalShippingPriceV2.add("amount");
-        totalShippingPriceV2.add("currencyCode");
+      order.add("subtotalPrice", {
+        alias: "subtotalPriceV2"
+      }, function (subtotalPrice) {
+        subtotalPrice.add("amount");
+        subtotalPrice.add("currencyCode");
       });
-      order.add("totalTax");
-      order.add("totalTaxV2", function (totalTaxV2) {
-        totalTaxV2.add("amount");
-        totalTaxV2.add("currencyCode");
+      order.add("totalShippingPrice", function (totalShippingPrice) {
+        totalShippingPrice.add("amount");
+        totalShippingPrice.add("currencyCode");
       });
-      order.add("totalPrice");
-      order.add("totalPriceV2", function (totalPriceV2) {
-        totalPriceV2.add("amount");
-        totalPriceV2.add("currencyCode");
+      order.add("totalShippingPrice", {
+        alias: "totalShippingPriceV2"
+      }, function (totalShippingPrice) {
+        totalShippingPrice.add("amount");
+        totalShippingPrice.add("currencyCode");
+      });
+      order.add("totalTax", function (totalTax) {
+        totalTax.add("amount");
+        totalTax.add("currencyCode");
+      });
+      order.add("totalTax", {
+        alias: "totalTaxV2"
+      }, function (totalTax) {
+        totalTax.add("amount");
+        totalTax.add("currencyCode");
+      });
+      order.add("totalPrice", function (totalPrice) {
+        totalPrice.add("amount");
+        totalPrice.add("currencyCode");
+      });
+      order.add("totalPrice", {
+        alias: "totalPriceV2"
+      }, function (totalPrice) {
+        totalPrice.add("amount");
+        totalPrice.add("currencyCode");
       });
       order.add("currencyCode");
-      order.add("totalRefunded");
-      order.add("totalRefundedV2", function (totalRefundedV2) {
-        totalRefundedV2.add("amount");
-        totalRefundedV2.add("currencyCode");
+      order.add("totalRefunded", function (totalRefunded) {
+        totalRefunded.add("amount");
+        totalRefunded.add("currencyCode");
+      });
+      order.add("totalRefunded", {
+        alias: "totalRefundedV2"
+      }, function (totalRefunded) {
+        totalRefunded.add("amount");
+        totalRefunded.add("currencyCode");
       });
       order.add("customerUrl");
       order.add("shippingAddress", function (shippingAddress) {
@@ -7845,7 +8740,7 @@ function query$24(client) {
   return document;
 }
 
-function query$25(client) {
+function query$24(client) {
   var document = client.document();
   var spreads = {};
   var variables = {};
@@ -7855,21 +8750,30 @@ function query$25(client) {
   spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
     root.add("id");
     root.add("title");
-    root.add("price");
-    root.add("priceV2", function (priceV2) {
-      priceV2.add("amount");
-      priceV2.add("currencyCode");
+    root.add("price", function (price) {
+      price.add("amount");
+      price.add("currencyCode");
+    });
+    root.add("price", {
+      alias: "priceV2"
+    }, function (price) {
+      price.add("amount");
+      price.add("currencyCode");
     });
     root.add("weight");
     root.add("availableForSale", {
       alias: "available"
     });
-    root.add("quantityAvailable");
     root.add("sku");
-    root.add("compareAtPrice");
-    root.add("compareAtPriceV2", function (compareAtPriceV2) {
-      compareAtPriceV2.add("amount");
-      compareAtPriceV2.add("currencyCode");
+    root.add("compareAtPrice", function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
+    });
+    root.add("compareAtPrice", {
+      alias: "compareAtPriceV2"
+    }, function (compareAtPrice) {
+      compareAtPrice.add("amount");
+      compareAtPrice.add("currencyCode");
     });
     root.add("image", function (image) {
       image.add("id");
@@ -7925,13 +8829,25 @@ function query$25(client) {
     });
   });
   spreads.AppliedGiftCardFragment = document.defineFragment("AppliedGiftCardFragment", "AppliedGiftCard", function (root) {
-    root.add("amountUsedV2", function (amountUsedV2) {
-      amountUsedV2.add("amount");
-      amountUsedV2.add("currencyCode");
+    root.add("amountUsed", function (amountUsed) {
+      amountUsed.add("amount");
+      amountUsed.add("currencyCode");
     });
-    root.add("balanceV2", function (balanceV2) {
-      balanceV2.add("amount");
-      balanceV2.add("currencyCode");
+    root.add("amountUsed", {
+      alias: "amountUsedV2"
+    }, function (amountUsed) {
+      amountUsed.add("amount");
+      amountUsed.add("currencyCode");
+    });
+    root.add("balance", function (balance) {
+      balance.add("amount");
+      balance.add("currencyCode");
+    });
+    root.add("balance", {
+      alias: "balanceV2"
+    }, function (balance) {
+      balance.add("amount");
+      balance.add("currencyCode");
     });
     root.add("presentmentAmountUsed", function (presentmentAmountUsed) {
       presentmentAmountUsed.add("amount");
@@ -7982,34 +8898,54 @@ function query$25(client) {
     root.add("ready");
     root.add("requiresShipping");
     root.add("note");
-    root.add("paymentDue");
-    root.add("paymentDueV2", function (paymentDueV2) {
-      paymentDueV2.add("amount");
-      paymentDueV2.add("currencyCode");
+    root.add("paymentDue", function (paymentDue) {
+      paymentDue.add("amount");
+      paymentDue.add("currencyCode");
+    });
+    root.add("paymentDue", {
+      alias: "paymentDueV2"
+    }, function (paymentDue) {
+      paymentDue.add("amount");
+      paymentDue.add("currencyCode");
     });
     root.add("webUrl");
     root.add("orderStatusUrl");
     root.add("taxExempt");
     root.add("taxesIncluded");
     root.add("currencyCode");
-    root.add("totalTax");
-    root.add("totalTaxV2", function (totalTaxV2) {
-      totalTaxV2.add("amount");
-      totalTaxV2.add("currencyCode");
+    root.add("totalTax", function (totalTax) {
+      totalTax.add("amount");
+      totalTax.add("currencyCode");
+    });
+    root.add("totalTax", {
+      alias: "totalTaxV2"
+    }, function (totalTax) {
+      totalTax.add("amount");
+      totalTax.add("currencyCode");
     });
     root.add("lineItemsSubtotalPrice", function (lineItemsSubtotalPrice) {
       lineItemsSubtotalPrice.add("amount");
       lineItemsSubtotalPrice.add("currencyCode");
     });
-    root.add("subtotalPrice");
-    root.add("subtotalPriceV2", function (subtotalPriceV2) {
-      subtotalPriceV2.add("amount");
-      subtotalPriceV2.add("currencyCode");
+    root.add("subtotalPrice", function (subtotalPrice) {
+      subtotalPrice.add("amount");
+      subtotalPrice.add("currencyCode");
     });
-    root.add("totalPrice");
-    root.add("totalPriceV2", function (totalPriceV2) {
-      totalPriceV2.add("amount");
-      totalPriceV2.add("currencyCode");
+    root.add("subtotalPrice", {
+      alias: "subtotalPriceV2"
+    }, function (subtotalPrice) {
+      subtotalPrice.add("amount");
+      subtotalPrice.add("currencyCode");
+    });
+    root.add("totalPrice", function (totalPrice) {
+      totalPrice.add("amount");
+      totalPrice.add("currencyCode");
+    });
+    root.add("totalPrice", {
+      alias: "totalPriceV2"
+    }, function (totalPrice) {
+      totalPrice.add("amount");
+      totalPrice.add("currencyCode");
     });
     root.add("completedAt");
     root.add("createdAt");
@@ -8038,10 +8974,15 @@ function query$25(client) {
     });
     root.add("shippingLine", function (shippingLine) {
       shippingLine.add("handle");
-      shippingLine.add("price");
-      shippingLine.add("priceV2", function (priceV2) {
-        priceV2.add("amount");
-        priceV2.add("currencyCode");
+      shippingLine.add("price", function (price) {
+        price.add("amount");
+        price.add("currencyCode");
+      });
+      shippingLine.add("price", {
+        alias: "priceV2"
+      }, function (price) {
+        price.add("amount");
+        price.add("currencyCode");
       });
       shippingLine.add("title");
     });
@@ -8053,31 +8994,56 @@ function query$25(client) {
       order.add("id");
       order.add("processedAt");
       order.add("orderNumber");
-      order.add("subtotalPrice");
-      order.add("subtotalPriceV2", function (subtotalPriceV2) {
-        subtotalPriceV2.add("amount");
-        subtotalPriceV2.add("currencyCode");
+      order.add("subtotalPrice", function (subtotalPrice) {
+        subtotalPrice.add("amount");
+        subtotalPrice.add("currencyCode");
       });
-      order.add("totalShippingPrice");
-      order.add("totalShippingPriceV2", function (totalShippingPriceV2) {
-        totalShippingPriceV2.add("amount");
-        totalShippingPriceV2.add("currencyCode");
+      order.add("subtotalPrice", {
+        alias: "subtotalPriceV2"
+      }, function (subtotalPrice) {
+        subtotalPrice.add("amount");
+        subtotalPrice.add("currencyCode");
       });
-      order.add("totalTax");
-      order.add("totalTaxV2", function (totalTaxV2) {
-        totalTaxV2.add("amount");
-        totalTaxV2.add("currencyCode");
+      order.add("totalShippingPrice", function (totalShippingPrice) {
+        totalShippingPrice.add("amount");
+        totalShippingPrice.add("currencyCode");
       });
-      order.add("totalPrice");
-      order.add("totalPriceV2", function (totalPriceV2) {
-        totalPriceV2.add("amount");
-        totalPriceV2.add("currencyCode");
+      order.add("totalShippingPrice", {
+        alias: "totalShippingPriceV2"
+      }, function (totalShippingPrice) {
+        totalShippingPrice.add("amount");
+        totalShippingPrice.add("currencyCode");
+      });
+      order.add("totalTax", function (totalTax) {
+        totalTax.add("amount");
+        totalTax.add("currencyCode");
+      });
+      order.add("totalTax", {
+        alias: "totalTaxV2"
+      }, function (totalTax) {
+        totalTax.add("amount");
+        totalTax.add("currencyCode");
+      });
+      order.add("totalPrice", function (totalPrice) {
+        totalPrice.add("amount");
+        totalPrice.add("currencyCode");
+      });
+      order.add("totalPrice", {
+        alias: "totalPriceV2"
+      }, function (totalPrice) {
+        totalPrice.add("amount");
+        totalPrice.add("currencyCode");
       });
       order.add("currencyCode");
-      order.add("totalRefunded");
-      order.add("totalRefundedV2", function (totalRefundedV2) {
-        totalRefundedV2.add("amount");
-        totalRefundedV2.add("currencyCode");
+      order.add("totalRefunded", function (totalRefunded) {
+        totalRefunded.add("amount");
+        totalRefunded.add("currencyCode");
+      });
+      order.add("totalRefunded", {
+        alias: "totalRefundedV2"
+      }, function (totalRefunded) {
+        totalRefunded.add("amount");
+        totalRefunded.add("currencyCode");
       });
       order.add("customerUrl");
       order.add("shippingAddress", function (shippingAddress) {
@@ -8164,32 +9130,6 @@ function query$25(client) {
   return document;
 }
 
-function query$26(client) {
-  var document = client.document();
-  var variables = {};
-  variables.checkoutShippingLineUpdate = {};
-  variables.checkoutShippingLineUpdate.checkoutId = client.variable("checkoutId", "ID!");
-  variables.checkoutShippingLineUpdate.shippingRateHandle = client.variable("shippingRateHandle", "String!");
-  document.addMutation("checkoutShippingLineUpdate", [variables.checkoutShippingLineUpdate.checkoutId, variables.checkoutShippingLineUpdate.shippingRateHandle], function (root) {
-    root.add("checkoutShippingLineUpdate", {
-      args: {
-        checkoutId: variables.checkoutShippingLineUpdate.checkoutId,
-        shippingRateHandle: variables.checkoutShippingLineUpdate.shippingRateHandle
-      }
-    }, function (checkoutShippingLineUpdate) {
-      checkoutShippingLineUpdate.add("checkout", function (checkout) {
-        checkout.add("id");
-      });
-      checkoutShippingLineUpdate.add("checkoutUserErrors", function (checkoutUserErrors) {
-        checkoutUserErrors.add("code");
-        checkoutUserErrors.add("field");
-        checkoutUserErrors.add("message");
-      });
-    });
-  });
-  return document;
-}
-
 // GraphQL
 /**
  * The JS Buy SDK checkout resource
@@ -8266,11 +9206,6 @@ var CheckoutResource = function (_Resource) {
 
       return this.graphQLClient.send(query$13, { input: input }).then(handleCheckoutMutation('checkoutCreate', this.graphQLClient));
     }
-  }, {
-    key: 'associateCustomer',
-    value: function associateCustomer(checkoutId, customerAccessToken) {
-      return this.graphQLClient.send(query$14, { checkoutId: checkoutId, customerAccessToken: customerAccessToken }).then(handleCheckoutMutation('checkoutCustomerAssociateV2', this.graphQLClient));
-    }
 
     /**
      * Replaces the value of checkout's custom attributes and/or note with values defined in the input
@@ -8296,7 +9231,7 @@ var CheckoutResource = function (_Resource) {
     value: function updateAttributes(checkoutId) {
       var input = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : {};
 
-      return this.graphQLClient.send(query$19, { checkoutId: checkoutId, input: input }).then(handleCheckoutMutation('checkoutAttributesUpdateV2', this.graphQLClient));
+      return this.graphQLClient.send(query$18, { checkoutId: checkoutId, input: input }).then(handleCheckoutMutation('checkoutAttributesUpdateV2', this.graphQLClient));
     }
 
     /**
@@ -8318,7 +9253,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'updateEmail',
     value: function updateEmail(checkoutId, email) {
-      return this.graphQLClient.send(query$24, { checkoutId: checkoutId, email: email }).then(handleCheckoutMutation('checkoutEmailUpdateV2', this.graphQLClient));
+      return this.graphQLClient.send(query$23, { checkoutId: checkoutId, email: email }).then(handleCheckoutMutation('checkoutEmailUpdateV2', this.graphQLClient));
     }
 
     /**
@@ -8340,7 +9275,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'addLineItems',
     value: function addLineItems(checkoutId, lineItems) {
-      return this.graphQLClient.send(query$15, { checkoutId: checkoutId, lineItems: lineItems }).then(handleCheckoutMutation('checkoutLineItemsAdd', this.graphQLClient));
+      return this.graphQLClient.send(query$14, { checkoutId: checkoutId, lineItems: lineItems }).then(handleCheckoutMutation('checkoutLineItemsAdd', this.graphQLClient));
     }
 
     /**
@@ -8362,7 +9297,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'addDiscount',
     value: function addDiscount(checkoutId, discountCode) {
-      return this.graphQLClient.send(query$20, { checkoutId: checkoutId, discountCode: discountCode }).then(handleCheckoutMutation('checkoutDiscountCodeApplyV2', this.graphQLClient));
+      return this.graphQLClient.send(query$19, { checkoutId: checkoutId, discountCode: discountCode }).then(handleCheckoutMutation('checkoutDiscountCodeApplyV2', this.graphQLClient));
     }
 
     /**
@@ -8382,7 +9317,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'removeDiscount',
     value: function removeDiscount(checkoutId) {
-      return this.graphQLClient.send(query$21, { checkoutId: checkoutId }).then(handleCheckoutMutation('checkoutDiscountCodeRemove', this.graphQLClient));
+      return this.graphQLClient.send(query$20, { checkoutId: checkoutId }).then(handleCheckoutMutation('checkoutDiscountCodeRemove', this.graphQLClient));
     }
 
     /**
@@ -8404,7 +9339,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'addGiftCards',
     value: function addGiftCards(checkoutId, giftCardCodes) {
-      return this.graphQLClient.send(query$22, { checkoutId: checkoutId, giftCardCodes: giftCardCodes }).then(handleCheckoutMutation('checkoutGiftCardsAppend', this.graphQLClient));
+      return this.graphQLClient.send(query$21, { checkoutId: checkoutId, giftCardCodes: giftCardCodes }).then(handleCheckoutMutation('checkoutGiftCardsAppend', this.graphQLClient));
     }
 
     /**
@@ -8426,7 +9361,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'removeGiftCard',
     value: function removeGiftCard(checkoutId, appliedGiftCardId) {
-      return this.graphQLClient.send(query$23, { checkoutId: checkoutId, appliedGiftCardId: appliedGiftCardId }).then(handleCheckoutMutation('checkoutGiftCardRemoveV2', this.graphQLClient));
+      return this.graphQLClient.send(query$22, { checkoutId: checkoutId, appliedGiftCardId: appliedGiftCardId }).then(handleCheckoutMutation('checkoutGiftCardRemoveV2', this.graphQLClient));
     }
 
     /**
@@ -8448,7 +9383,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'removeLineItems',
     value: function removeLineItems(checkoutId, lineItemIds) {
-      return this.graphQLClient.send(query$16, { checkoutId: checkoutId, lineItemIds: lineItemIds }).then(handleCheckoutMutation('checkoutLineItemsRemove', this.graphQLClient));
+      return this.graphQLClient.send(query$15, { checkoutId: checkoutId, lineItemIds: lineItemIds }).then(handleCheckoutMutation('checkoutLineItemsRemove', this.graphQLClient));
     }
 
     /**
@@ -8470,7 +9405,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'replaceLineItems',
     value: function replaceLineItems(checkoutId, lineItems) {
-      return this.graphQLClient.send(query$17, { checkoutId: checkoutId, lineItems: lineItems }).then(handleCheckoutMutation('checkoutLineItemsReplace', this.graphQLClient));
+      return this.graphQLClient.send(query$16, { checkoutId: checkoutId, lineItems: lineItems }).then(handleCheckoutMutation('checkoutLineItemsReplace', this.graphQLClient));
     }
 
     /**
@@ -8498,7 +9433,7 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'updateLineItems',
     value: function updateLineItems(checkoutId, lineItems) {
-      return this.graphQLClient.send(query$18, { checkoutId: checkoutId, lineItems: lineItems }).then(handleCheckoutMutation('checkoutLineItemsUpdate', this.graphQLClient));
+      return this.graphQLClient.send(query$17, { checkoutId: checkoutId, lineItems: lineItems }).then(handleCheckoutMutation('checkoutLineItemsUpdate', this.graphQLClient));
     }
 
     /**
@@ -8531,873 +9466,10 @@ var CheckoutResource = function (_Resource) {
   }, {
     key: 'updateShippingAddress',
     value: function updateShippingAddress(checkoutId, shippingAddress) {
-      return this.graphQLClient.send(query$25, { checkoutId: checkoutId, shippingAddress: shippingAddress }).then(handleCheckoutMutation('checkoutShippingAddressUpdateV2', this.graphQLClient));
-    }
-
-    /**
-     * Updates the shipping lines on an existing checkout.
-     *
-     * @param  {String} checkoutId The ID of the checkout to update shipping address.
-     * @param  {Object} shippingRateHandle A unique identifier to a Checkout’s shipping provide
-     * @return {Promise|GraphModel} A promise resolving with the updated checkout.
-     */
-
-  }, {
-    key: 'updateShippingLineAddress',
-    value: function updateShippingLineAddress(checkoutId, shippingRateHandle) {
-      return this.graphQLClient.send(query$26, { checkoutId: checkoutId, shippingRateHandle: shippingRateHandle }).then(handleCheckoutMutation('checkoutShippingLineUpdate', this.graphQLClient));
+      return this.graphQLClient.send(query$24, { checkoutId: checkoutId, shippingAddress: shippingAddress }).then(handleCheckoutMutation('checkoutShippingAddressUpdateV2', this.graphQLClient));
     }
   }]);
   return CheckoutResource;
-}(Resource);
-
-function handleCustomerMutation(mutationRootKey) {
-  return function (_ref) {
-    var _ref$data = _ref.data,
-        data = _ref$data === undefined ? {} : _ref$data,
-        errors = _ref.errors;
-
-    try {
-      var rootData = data[mutationRootKey];
-
-      if (errors && errors.length) {
-        return Promise.reject(new Error(JSON.stringify(errors)));
-      }
-
-      if (rootData && rootData.customerUserErrors && rootData.customerUserErrors.length) {
-        return Promise.reject(new Error(JSON.stringify(rootData.customerUserErrors)));
-      }
-
-      if (rootData && rootData.userErrors && rootData.userErrors.length) {
-        return Promise.reject(new Error(JSON.stringify(rootData.userErrors)));
-      }
-
-      if (rootData) {
-        return rootData;
-      }
-
-      return Promise.reject(new Error("The " + mutationRootKey + " mutation failed due to an unknown error."));
-    } catch (_) {
-      return Promise.reject(new Error("The " + mutationRootKey + " mutation failed due to an unknown error."));
-    }
-  };
-}
-
-function query$27(client) {
-  var document = client.document();
-  var variables = {};
-  variables.__defaultOperation__ = {};
-  variables.__defaultOperation__.customerAccessToken = client.variable("customerAccessToken", "String!");
-  document.addQuery([variables.__defaultOperation__.customerAccessToken], function (root) {
-    root.add("customer", {
-      args: {
-        customerAccessToken: variables.__defaultOperation__.customerAccessToken
-      }
-    }, function (customer) {
-      customer.add("id");
-      customer.add("firstName");
-      customer.add("lastName");
-      customer.add("tags");
-    });
-  });
-  return document;
-}
-
-function query$28(client) {
-  var document = client.document();
-  var spreads = {};
-  var variables = {};
-  variables.__defaultOperation__ = {};
-  variables.__defaultOperation__.customerAccessToken = client.variable("customerAccessToken", "String!");
-  variables.__defaultOperation__.first = client.variable("first", "Int!");
-  variables.__defaultOperation__.last = client.variable("last", "Int");
-  variables.__defaultOperation__.after = client.variable("after", "String");
-  variables.__defaultOperation__.before = client.variable("before", "String");
-  variables.__defaultOperation__.reverse = client.variable("reverse", "Boolean");
-  spreads.VariantFragment = document.defineFragment("VariantFragment", "ProductVariant", function (root) {
-    root.add("id");
-    root.add("title");
-    root.add("price");
-    root.add("priceV2", function (priceV2) {
-      priceV2.add("amount");
-      priceV2.add("currencyCode");
-    });
-    root.add("weight");
-    root.add("availableForSale", {
-      alias: "available"
-    });
-    root.add("quantityAvailable");
-    root.add("sku");
-    root.add("compareAtPrice");
-    root.add("compareAtPriceV2", function (compareAtPriceV2) {
-      compareAtPriceV2.add("amount");
-      compareAtPriceV2.add("currencyCode");
-    });
-    root.add("image", function (image) {
-      image.add("id");
-      image.add("url", {
-        alias: "src"
-      });
-      image.add("altText");
-      image.add("width");
-      image.add("height");
-    });
-    root.add("selectedOptions", function (selectedOptions) {
-      selectedOptions.add("name");
-      selectedOptions.add("value");
-    });
-    root.add("unitPrice", function (unitPrice) {
-      unitPrice.add("amount");
-      unitPrice.add("currencyCode");
-    });
-    root.add("unitPriceMeasurement", function (unitPriceMeasurement) {
-      unitPriceMeasurement.add("measuredType");
-      unitPriceMeasurement.add("quantityUnit");
-      unitPriceMeasurement.add("quantityValue");
-      unitPriceMeasurement.add("referenceUnit");
-      unitPriceMeasurement.add("referenceValue");
-    });
-  });
-  spreads.VariantWithProductFragment = document.defineFragment("VariantWithProductFragment", "ProductVariant", function (root) {
-    root.addFragment(spreads.VariantFragment);
-    root.add("product", function (product) {
-      product.add("id");
-      product.add("handle");
-    });
-  });
-  document.addQuery([variables.__defaultOperation__.customerAccessToken, variables.__defaultOperation__.first, variables.__defaultOperation__.last, variables.__defaultOperation__.after, variables.__defaultOperation__.before, variables.__defaultOperation__.reverse], function (root) {
-    root.add("customer", {
-      args: {
-        customerAccessToken: variables.__defaultOperation__.customerAccessToken
-      }
-    }, function (customer) {
-      customer.add("id");
-      customer.add("firstName");
-      customer.add("lastName");
-      customer.add("orders", {
-        args: {
-          first: variables.__defaultOperation__.first,
-          last: variables.__defaultOperation__.last,
-          after: variables.__defaultOperation__.after,
-          before: variables.__defaultOperation__.before,
-          reverse: variables.__defaultOperation__.reverse
-        }
-      }, function (orders) {
-        orders.add("pageInfo", function (pageInfo) {
-          pageInfo.add("hasNextPage");
-          pageInfo.add("hasPreviousPage");
-        });
-        orders.add("edges", function (edges) {
-          edges.add("cursor");
-          edges.add("node", function (node) {
-            node.add("lineItems", {
-              args: {
-                first: 5
-              }
-            }, function (lineItems) {
-              lineItems.add("pageInfo", function (pageInfo) {
-                pageInfo.add("hasNextPage");
-                pageInfo.add("hasPreviousPage");
-              });
-              lineItems.add("edges", function (edges) {
-                edges.add("cursor");
-                edges.add("node", function (node) {
-                  node.add("currentQuantity");
-                  node.add("customAttributes", function (customAttributes) {
-                    customAttributes.add("key");
-                    customAttributes.add("value");
-                  });
-                  node.add("discountAllocations", function (discountAllocations) {
-                    discountAllocations.add("allocatedAmount", function (allocatedAmount) {
-                      allocatedAmount.add("amount");
-                      allocatedAmount.add("currencyCode");
-                    });
-                  });
-                  node.add("discountedTotalPrice", function (discountedTotalPrice) {
-                    discountedTotalPrice.add("amount");
-                    discountedTotalPrice.add("currencyCode");
-                  });
-                  node.add("originalTotalPrice", function (originalTotalPrice) {
-                    originalTotalPrice.add("amount");
-                    originalTotalPrice.add("currencyCode");
-                  });
-                  node.add("quantity");
-                  node.add("title");
-                  node.add("variant", function (variant) {
-                    variant.addFragment(spreads.VariantWithProductFragment);
-                  });
-                });
-              });
-            });
-            node.add("cancelReason");
-            node.add("canceledAt");
-            node.add("currencyCode");
-            node.add("currentSubtotalPrice", function (currentSubtotalPrice) {
-              currentSubtotalPrice.add("amount");
-              currentSubtotalPrice.add("currencyCode");
-            });
-            node.add("currentTotalDuties", function (currentTotalDuties) {
-              currentTotalDuties.add("amount");
-              currentTotalDuties.add("currencyCode");
-            });
-            node.add("currentTotalPrice", function (currentTotalPrice) {
-              currentTotalPrice.add("amount");
-              currentTotalPrice.add("currencyCode");
-            });
-            node.add("currentTotalTax", function (currentTotalTax) {
-              currentTotalTax.add("amount");
-            });
-            node.add("customerLocale");
-            node.add("customerUrl");
-            node.add("edited");
-            node.add("email");
-            node.add("financialStatus");
-            node.add("fulfillmentStatus");
-            node.add("id");
-            node.add("name");
-            node.add("orderNumber");
-            node.add("originalTotalDuties", function (originalTotalDuties) {
-              originalTotalDuties.add("amount");
-            });
-            node.add("originalTotalPrice", function (originalTotalPrice) {
-              originalTotalPrice.add("amount");
-            });
-            node.add("phone");
-            node.add("processedAt");
-            node.add("shippingAddress", function (shippingAddress) {
-              shippingAddress.add("country");
-            });
-            node.add("statusUrl");
-            node.add("subtotalPriceV2", function (subtotalPriceV2) {
-              subtotalPriceV2.add("amount");
-            });
-            node.add("totalPriceV2", function (totalPriceV2) {
-              totalPriceV2.add("amount");
-            });
-            node.add("totalRefundedV2", function (totalRefundedV2) {
-              totalRefundedV2.add("amount");
-            });
-            node.add("totalShippingPriceV2", function (totalShippingPriceV2) {
-              totalShippingPriceV2.add("amount");
-            });
-            node.add("totalTaxV2", function (totalTaxV2) {
-              totalTaxV2.add("amount");
-            });
-          });
-        });
-      });
-    });
-  });
-  return document;
-}
-
-function query$29(client) {
-  var document = client.document();
-  var variables = {};
-  variables.customerCreate = {};
-  variables.customerCreate.input = client.variable("input", "CustomerCreateInput!");
-  document.addMutation("customerCreate", [variables.customerCreate.input], function (root) {
-    root.add("customerCreate", {
-      args: {
-        input: variables.customerCreate.input
-      }
-    }, function (customerCreate) {
-      customerCreate.add("customer", function (customer) {
-        customer.add("id");
-      });
-      customerCreate.add("customerUserErrors", function (customerUserErrors) {
-        customerUserErrors.add("code");
-        customerUserErrors.add("field");
-        customerUserErrors.add("message");
-      });
-    });
-  });
-  return document;
-}
-
-function query$30(client) {
-  var document = client.document();
-  var variables = {};
-  variables.customerAccessTokenCreate = {};
-  variables.customerAccessTokenCreate.input = client.variable("input", "CustomerAccessTokenCreateInput!");
-  document.addMutation("customerAccessTokenCreate", [variables.customerAccessTokenCreate.input], function (root) {
-    root.add("customerAccessTokenCreate", {
-      args: {
-        input: variables.customerAccessTokenCreate.input
-      }
-    }, function (customerAccessTokenCreate) {
-      customerAccessTokenCreate.add("customerAccessToken", function (customerAccessToken) {
-        customerAccessToken.add("accessToken");
-        customerAccessToken.add("expiresAt");
-      });
-      customerAccessTokenCreate.add("customerUserErrors", function (customerUserErrors) {
-        customerUserErrors.add("code");
-        customerUserErrors.add("field");
-        customerUserErrors.add("message");
-      });
-    });
-  });
-  return document;
-}
-
-function query$31(client) {
-  var document = client.document();
-  var variables = {};
-  variables.customerAccessTokenCreateWithMultipass = {};
-  variables.customerAccessTokenCreateWithMultipass.multipassToken = client.variable("multipassToken", "String!");
-  document.addMutation("customerAccessTokenCreateWithMultipass", [variables.customerAccessTokenCreateWithMultipass.multipassToken], function (root) {
-    root.add("customerAccessTokenCreateWithMultipass", {
-      args: {
-        multipassToken: variables.customerAccessTokenCreateWithMultipass.multipassToken
-      }
-    }, function (customerAccessTokenCreateWithMultipass) {
-      customerAccessTokenCreateWithMultipass.add("customerAccessToken", function (customerAccessToken) {
-        customerAccessToken.add("accessToken");
-        customerAccessToken.add("expiresAt");
-      });
-      customerAccessTokenCreateWithMultipass.add("customerUserErrors", function (customerUserErrors) {
-        customerUserErrors.add("code");
-        customerUserErrors.add("field");
-        customerUserErrors.add("message");
-      });
-    });
-  });
-  return document;
-}
-
-function query$32(client) {
-  var document = client.document();
-  var variables = {};
-  variables.customerAccessTokenDelete = {};
-  variables.customerAccessTokenDelete.customerAccessToken = client.variable("customerAccessToken", "String!");
-  document.addMutation("customerAccessTokenDelete", [variables.customerAccessTokenDelete.customerAccessToken], function (root) {
-    root.add("customerAccessTokenDelete", {
-      args: {
-        customerAccessToken: variables.customerAccessTokenDelete.customerAccessToken
-      }
-    }, function (customerAccessTokenDelete) {
-      customerAccessTokenDelete.add("deletedAccessToken");
-      customerAccessTokenDelete.add("deletedCustomerAccessTokenId");
-      customerAccessTokenDelete.add("userErrors", function (userErrors) {
-        userErrors.add("field");
-        userErrors.add("message");
-      });
-    });
-  });
-  return document;
-}
-
-function query$33(client) {
-  var document = client.document();
-  var variables = {};
-  variables.customerAccessTokenRenew = {};
-  variables.customerAccessTokenRenew.customerAccessToken = client.variable("customerAccessToken", "String!");
-  document.addMutation("customerAccessTokenRenew", [variables.customerAccessTokenRenew.customerAccessToken], function (root) {
-    root.add("customerAccessTokenRenew", {
-      args: {
-        customerAccessToken: variables.customerAccessTokenRenew.customerAccessToken
-      }
-    }, function (customerAccessTokenRenew) {
-      customerAccessTokenRenew.add("customerAccessToken", function (customerAccessToken) {
-        customerAccessToken.add("accessToken");
-        customerAccessToken.add("expiresAt");
-      });
-      customerAccessTokenRenew.add("userErrors", function (userErrors) {
-        userErrors.add("field");
-        userErrors.add("message");
-      });
-    });
-  });
-  return document;
-}
-
-function query$34(client) {
-  var document = client.document();
-  var variables = {};
-  variables.customerActivateByUrl = {};
-  variables.customerActivateByUrl.activationUrl = client.variable("activationUrl", "URL!");
-  variables.customerActivateByUrl.password = client.variable("password", "String!");
-  document.addMutation("customerActivateByUrl", [variables.customerActivateByUrl.activationUrl, variables.customerActivateByUrl.password], function (root) {
-    root.add("customerActivateByUrl", {
-      args: {
-        activationUrl: variables.customerActivateByUrl.activationUrl,
-        password: variables.customerActivateByUrl.password
-      }
-    }, function (customerActivateByUrl) {
-      customerActivateByUrl.add("customer", function (customer) {
-        customer.add("id");
-      });
-      customerActivateByUrl.add("customerAccessToken", function (customerAccessToken) {
-        customerAccessToken.add("accessToken");
-        customerAccessToken.add("expiresAt");
-      });
-      customerActivateByUrl.add("customerUserErrors", function (customerUserErrors) {
-        customerUserErrors.add("code");
-        customerUserErrors.add("field");
-        customerUserErrors.add("message");
-      });
-    });
-  });
-  return document;
-}
-
-function query$35(client) {
-  var document = client.document();
-  var variables = {};
-  variables.customerActivate = {};
-  variables.customerActivate.id = client.variable("id", "ID!");
-  variables.customerActivate.input = client.variable("input", "CustomerActivateInput!");
-  document.addMutation("customerActivate", [variables.customerActivate.id, variables.customerActivate.input], function (root) {
-    root.add("customerActivate", {
-      args: {
-        id: variables.customerActivate.id,
-        input: variables.customerActivate.input
-      }
-    }, function (customerActivate) {
-      customerActivate.add("customer", function (customer) {
-        customer.add("id");
-      });
-      customerActivate.add("customerAccessToken", function (customerAccessToken) {
-        customerAccessToken.add("accessToken");
-        customerAccessToken.add("expiresAt");
-      });
-      customerActivate.add("customerUserErrors", function (customerUserErrors) {
-        customerUserErrors.add("code");
-        customerUserErrors.add("field");
-        customerUserErrors.add("message");
-      });
-    });
-  });
-  return document;
-}
-
-function query$36(client) {
-  var document = client.document();
-  var variables = {};
-  variables.customerAddressCreate = {};
-  variables.customerAddressCreate.customerAccessToken = client.variable("customerAccessToken", "String!");
-  variables.customerAddressCreate.address = client.variable("address", "MailingAddressInput!");
-  document.addMutation("customerAddressCreate", [variables.customerAddressCreate.customerAccessToken, variables.customerAddressCreate.address], function (root) {
-    root.add("customerAddressCreate", {
-      args: {
-        customerAccessToken: variables.customerAddressCreate.customerAccessToken,
-        address: variables.customerAddressCreate.address
-      }
-    }, function (customerAddressCreate) {
-      customerAddressCreate.add("customerAddress", function (customerAddress) {
-        customerAddress.add("id");
-      });
-      customerAddressCreate.add("customerUserErrors", function (customerUserErrors) {
-        customerUserErrors.add("code");
-        customerUserErrors.add("field");
-        customerUserErrors.add("message");
-      });
-    });
-  });
-  return document;
-}
-
-function query$37(client) {
-  var document = client.document();
-  var variables = {};
-  variables.customerAddressDelete = {};
-  variables.customerAddressDelete.id = client.variable("id", "ID!");
-  variables.customerAddressDelete.customerAccessToken = client.variable("customerAccessToken", "String!");
-  document.addMutation("customerAddressDelete", [variables.customerAddressDelete.id, variables.customerAddressDelete.customerAccessToken], function (root) {
-    root.add("customerAddressDelete", {
-      args: {
-        id: variables.customerAddressDelete.id,
-        customerAccessToken: variables.customerAddressDelete.customerAccessToken
-      }
-    }, function (customerAddressDelete) {
-      customerAddressDelete.add("customerUserErrors", function (customerUserErrors) {
-        customerUserErrors.add("code");
-        customerUserErrors.add("field");
-        customerUserErrors.add("message");
-      });
-      customerAddressDelete.add("deletedCustomerAddressId");
-    });
-  });
-  return document;
-}
-
-function query$38(client) {
-  var document = client.document();
-  var variables = {};
-  variables.customerAddressUpdate = {};
-  variables.customerAddressUpdate.customerAccessToken = client.variable("customerAccessToken", "String!");
-  variables.customerAddressUpdate.id = client.variable("id", "ID!");
-  variables.customerAddressUpdate.address = client.variable("address", "MailingAddressInput!");
-  document.addMutation("customerAddressUpdate", [variables.customerAddressUpdate.customerAccessToken, variables.customerAddressUpdate.id, variables.customerAddressUpdate.address], function (root) {
-    root.add("customerAddressUpdate", {
-      args: {
-        customerAccessToken: variables.customerAddressUpdate.customerAccessToken,
-        id: variables.customerAddressUpdate.id,
-        address: variables.customerAddressUpdate.address
-      }
-    }, function (customerAddressUpdate) {
-      customerAddressUpdate.add("customerAddress", function (customerAddress) {
-        customerAddress.add("id");
-      });
-      customerAddressUpdate.add("customerUserErrors", function (customerUserErrors) {
-        customerUserErrors.add("code");
-        customerUserErrors.add("field");
-        customerUserErrors.add("message");
-      });
-    });
-  });
-  return document;
-}
-
-function query$39(client) {
-  var document = client.document();
-  var variables = {};
-  variables.customerDefaultAddressUpdate = {};
-  variables.customerDefaultAddressUpdate.customerAccessToken = client.variable("customerAccessToken", "String!");
-  variables.customerDefaultAddressUpdate.addressId = client.variable("addressId", "ID!");
-  document.addMutation("customerDefaultAddressUpdate", [variables.customerDefaultAddressUpdate.customerAccessToken, variables.customerDefaultAddressUpdate.addressId], function (root) {
-    root.add("customerDefaultAddressUpdate", {
-      args: {
-        customerAccessToken: variables.customerDefaultAddressUpdate.customerAccessToken,
-        addressId: variables.customerDefaultAddressUpdate.addressId
-      }
-    }, function (customerDefaultAddressUpdate) {
-      customerDefaultAddressUpdate.add("customer", function (customer) {
-        customer.add("id");
-      });
-      customerDefaultAddressUpdate.add("customerUserErrors", function (customerUserErrors) {
-        customerUserErrors.add("code");
-        customerUserErrors.add("field");
-        customerUserErrors.add("message");
-      });
-    });
-  });
-  return document;
-}
-
-function query$40(client) {
-  var document = client.document();
-  var variables = {};
-  variables.customerRecover = {};
-  variables.customerRecover.email = client.variable("email", "String!");
-  document.addMutation("customerRecover", [variables.customerRecover.email], function (root) {
-    root.add("customerRecover", {
-      args: {
-        email: variables.customerRecover.email
-      }
-    }, function (customerRecover) {
-      customerRecover.add("customerUserErrors", function (customerUserErrors) {
-        customerUserErrors.add("code");
-        customerUserErrors.add("field");
-        customerUserErrors.add("message");
-      });
-    });
-  });
-  return document;
-}
-
-function query$41(client) {
-  var document = client.document();
-  var variables = {};
-  variables.customerResetByUrl = {};
-  variables.customerResetByUrl.resetUrl = client.variable("resetUrl", "URL!");
-  variables.customerResetByUrl.password = client.variable("password", "String!");
-  document.addMutation("customerResetByUrl", [variables.customerResetByUrl.resetUrl, variables.customerResetByUrl.password], function (root) {
-    root.add("customerResetByUrl", {
-      args: {
-        resetUrl: variables.customerResetByUrl.resetUrl,
-        password: variables.customerResetByUrl.password
-      }
-    }, function (customerResetByUrl) {
-      customerResetByUrl.add("customer", function (customer) {
-        customer.add("id");
-      });
-      customerResetByUrl.add("customerAccessToken", function (customerAccessToken) {
-        customerAccessToken.add("accessToken");
-        customerAccessToken.add("expiresAt");
-      });
-      customerResetByUrl.add("customerUserErrors", function (customerUserErrors) {
-        customerUserErrors.add("code");
-        customerUserErrors.add("field");
-        customerUserErrors.add("message");
-      });
-    });
-  });
-  return document;
-}
-
-function query$42(client) {
-  var document = client.document();
-  var variables = {};
-  variables.customerReset = {};
-  variables.customerReset.id = client.variable("id", "ID!");
-  variables.customerReset.input = client.variable("input", "CustomerResetInput!");
-  document.addMutation("customerReset", [variables.customerReset.id, variables.customerReset.input], function (root) {
-    root.add("customerReset", {
-      args: {
-        id: variables.customerReset.id,
-        input: variables.customerReset.input
-      }
-    }, function (customerReset) {
-      customerReset.add("customer", function (customer) {
-        customer.add("id");
-      });
-      customerReset.add("customerAccessToken", function (customerAccessToken) {
-        customerAccessToken.add("accessToken");
-        customerAccessToken.add("expiresAt");
-      });
-      customerReset.add("customerUserErrors", function (customerUserErrors) {
-        customerUserErrors.add("code");
-        customerUserErrors.add("field");
-        customerUserErrors.add("message");
-      });
-    });
-  });
-  return document;
-}
-
-function query$43(client) {
-  var document = client.document();
-  var variables = {};
-  variables.customerUpdate = {};
-  variables.customerUpdate.customerAccessToken = client.variable("customerAccessToken", "String!");
-  variables.customerUpdate.customer = client.variable("customer", "CustomerUpdateInput!");
-  document.addMutation("customerUpdate", [variables.customerUpdate.customerAccessToken, variables.customerUpdate.customer], function (root) {
-    root.add("customerUpdate", {
-      args: {
-        customerAccessToken: variables.customerUpdate.customerAccessToken,
-        customer: variables.customerUpdate.customer
-      }
-    }, function (customerUpdate) {
-      customerUpdate.add("customer", function (customer) {
-        customer.add("id");
-      });
-      customerUpdate.add("customerAccessToken", function (customerAccessToken) {
-        customerAccessToken.add("accessToken");
-        customerAccessToken.add("expiresAt");
-      });
-      customerUpdate.add("customerUserErrors", function (customerUserErrors) {
-        customerUserErrors.add("code");
-        customerUserErrors.add("field");
-        customerUserErrors.add("message");
-      });
-    });
-  });
-  return document;
-}
-
-// GraphQL
-/**
- * The JS Buy SDK customer resource
- * @class
- */
-
-var CustomerResource = function (_Resource) {
-  inherits$1(CustomerResource, _Resource);
-
-  function CustomerResource() {
-    classCallCheck$1(this, CustomerResource);
-    return possibleConstructorReturn$1(this, (CustomerResource.__proto__ || Object.getPrototypeOf(CustomerResource)).apply(this, arguments));
-  }
-
-  createClass$1(CustomerResource, [{
-    key: 'fetch',
-    value: function fetch(customerAccessToken) {
-      return this.graphQLClient.send(query$27, { customerAccessToken: customerAccessToken }).then(defaultResolver('customer'));
-    }
-  }, {
-    key: 'fetchOrders',
-    value: function fetchOrders(customerAccessToken, first) {
-      var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
-      var last = options.last,
-          after = options.after,
-          before = options.before,
-          reverse = options.reverse;
-
-
-      return this.graphQLClient.send(query$28, { customerAccessToken: customerAccessToken, first: first, last: last, after: after, before: before, reverse: reverse }).then(defaultResolver('customer'));
-    }
-
-    /**
-     * Creates a customer.
-     *
-     * @example
-     * const input = {
-     *   email: "isamu@to-kyo.to",
-     *   password: "HiZqFuDvDdQ7"
-     * };
-     *
-     * client.customer.create(input).then((customer) => {
-     *   // Do something with the newly created customer
-     * });
-     *
-     * @param {Object} [input] An input object containing of:
-     *   @param {String} [input.email] The customer’s email
-     *   @param {String} [input.password] The login password used by the customer.
-     * @return {Promise|GraphModel} A promise resolving with the created customer.
-     */
-
-  }, {
-    key: 'create',
-    value: function create(input) {
-      return this.graphQLClient.send(query$29, { input: input }).then(handleCustomerMutation('customerCreate'));
-    }
-
-    /**
-     * Update a customer.
-     *
-     */
-
-  }, {
-    key: 'update',
-    value: function update(customerAccessToken, customer) {
-      return this.graphQLClient.send(query$43, { customerAccessToken: customerAccessToken, customer: customer }).then(handleCustomerMutation('customerUpdate'));
-    }
-
-    /**
-     * Create a access token.
-     *
-     */
-
-  }, {
-    key: 'createAccessToken',
-    value: function createAccessToken(input) {
-      return this.graphQLClient.send(query$30, { input: input }).then(handleCustomerMutation('customerAccessTokenCreate'));
-    }
-
-    /**
-     * Delete a access token.
-     *
-     */
-
-  }, {
-    key: 'deleteAccessToken',
-    value: function deleteAccessToken(customerAccessToken) {
-      return this.graphQLClient.send(query$32, { customerAccessToken: customerAccessToken }).then(handleCustomerMutation('customerAccessTokenDelete'));
-    }
-
-    /**
-     * Renew a access token.
-     *
-     */
-
-  }, {
-    key: 'renewAccessToken',
-    value: function renewAccessToken(customerAccessToken) {
-      return this.graphQLClient.send(query$33, { customerAccessToken: customerAccessToken }).then(handleCustomerMutation('customerAccessTokenRenew'));
-    }
-
-    /**
-     * Create a access token with Multipass.
-     *
-     */
-
-  }, {
-    key: 'createAccessTokenWithMultipass',
-    value: function createAccessTokenWithMultipass(multipassToken) {
-      return this.graphQLClient.send(query$31, { multipassToken: multipassToken }).then(handleCustomerMutation('customerAccessTokenCreateWithMultipass'));
-    }
-
-    /**
-     * Activate customer account.
-     *
-     */
-
-  }, {
-    key: 'activate',
-    value: function activate(id, input) {
-      return this.graphQLClient.send(query$35, { id: id, input: input }).then(handleCustomerMutation('customerActivate'));
-    }
-
-    /**
-     * Activate customer account by URL.
-     *
-     */
-
-  }, {
-    key: 'activateByUrl',
-    value: function activateByUrl(activationUrl, password) {
-      return this.graphQLClient.send(query$34, { activationUrl: activationUrl, password: password }).then(handleCustomerMutation('customerActivateByUrl'));
-    }
-
-    /**
-     * Create customer's address.
-     *
-     */
-
-  }, {
-    key: 'createAddress',
-    value: function createAddress(customerAccessToken, address) {
-      return this.graphQLClient.send(query$36, { customerAccessToken: customerAccessToken, address: address }).then(handleCustomerMutation('customerAddressCreate'));
-    }
-
-    /**
-     * Delete customer's address.
-     *
-     */
-
-  }, {
-    key: 'deleteAddress',
-    value: function deleteAddress(id, customerAccessToken) {
-      return this.graphQLClient.send(query$37, { id: id, customerAccessToken: customerAccessToken }).then(handleCustomerMutation('customerAddressDelete'));
-    }
-
-    /**
-     * Update customer's address.
-     *
-     */
-
-  }, {
-    key: 'updateAddress',
-    value: function updateAddress(customerAccessToken, id, address) {
-      return this.graphQLClient.send(query$38, { customerAccessToken: customerAccessToken, id: id, address: address }).then(handleCustomerMutation('customerAddressUpdate'));
-    }
-
-    /**
-     * Update customer's default address.
-     *
-     */
-
-  }, {
-    key: 'updateDefaultAddress',
-    value: function updateDefaultAddress(customerAccessToken, addressId) {
-      return this.graphQLClient.send(query$39, { customerAccessToken: customerAccessToken, addressId: addressId }).then(handleCustomerMutation('customerDefaultAddressUpdate'));
-    }
-
-    /**
-     * Recover customer.
-     *
-     */
-
-  }, {
-    key: 'recover',
-    value: function recover(email) {
-      return this.graphQLClient.send(query$40, { email: email }).then(handleCustomerMutation('customerRecover'));
-    }
-
-    /**
-     * Reset customer password.
-     *
-     */
-
-  }, {
-    key: 'reset',
-    value: function reset(id, input) {
-      return this.graphQLClient.send(query$42, { id: id, input: input }).then(handleCustomerMutation('customerReset'));
-    }
-
-    /**
-     * Reset customer password by Url.
-     *
-     */
-
-  }, {
-    key: 'resetByUrl',
-    value: function resetByUrl(resetUrl, password) {
-      return this.graphQLClient.send(query$41, { resetUrl: resetUrl, password: password }).then(handleCustomerMutation('customerResetByUrl'));
-    }
-  }]);
-  return CustomerResource;
 }(Resource);
 
 /**
@@ -9462,14 +9534,14 @@ var ImageResource = function (_Resource) {
   return ImageResource;
 }(Resource);
 
-var version = "2.16.1";
+var version = "2.20.1";
 
 var AppliedGiftCard = {
   "name": "AppliedGiftCard",
   "kind": "OBJECT",
   "fieldBaseTypes": {
-    "amountUsedV2": "MoneyV2",
-    "balanceV2": "MoneyV2",
+    "amountUsed": "MoneyV2",
+    "balance": "MoneyV2",
     "id": "ID",
     "lastCharacters": "String",
     "presentmentAmountUsed": "MoneyV2"
@@ -9518,20 +9590,16 @@ var Checkout = {
     "note": "String",
     "order": "Order",
     "orderStatusUrl": "URL",
-    "paymentDue": "Money",
-    "paymentDueV2": "MoneyV2",
+    "paymentDue": "MoneyV2",
     "ready": "Boolean",
     "requiresShipping": "Boolean",
     "shippingAddress": "MailingAddress",
     "shippingLine": "ShippingRate",
-    "subtotalPrice": "Money",
-    "subtotalPriceV2": "MoneyV2",
+    "subtotalPrice": "MoneyV2",
     "taxExempt": "Boolean",
     "taxesIncluded": "Boolean",
-    "totalPrice": "Money",
-    "totalPriceV2": "MoneyV2",
-    "totalTax": "Money",
-    "totalTaxV2": "MoneyV2",
+    "totalPrice": "MoneyV2",
+    "totalTax": "MoneyV2",
     "updatedAt": "DateTime",
     "webUrl": "URL"
   },
@@ -9790,11 +9858,10 @@ var Customer = {
   "name": "Customer",
   "kind": "OBJECT",
   "fieldBaseTypes": {
+    "email": "String",
     "firstName": "String",
     "id": "ID",
-    "lastName": "String",
-    "orders": "OrderConnection",
-    "tags": "String"
+    "lastName": "String"
   },
   "implementsNode": false
 };
@@ -10155,11 +10222,6 @@ var ManualDiscountApplication = {
   "implementsNode": false
 };
 
-var Money = {
-  "name": "Money",
-  "kind": "SCALAR"
-};
-
 var MoneyV2 = {
   "name": "MoneyV2",
   "kind": "OBJECT",
@@ -10207,6 +10269,7 @@ var Mutation$1 = {
   "implementsNode": false,
   "relayInputObjectBaseTypes": {
     "cartCreate": "CartInput",
+    "cartMetafieldDelete": "CartMetafieldDeleteInput",
     "checkoutAttributesUpdateV2": "CheckoutAttributesUpdateV2Input",
     "checkoutCreate": "CheckoutCreateInput",
     "customerAccessTokenCreate": "CustomerAccessTokenCreateInput",
@@ -10220,94 +10283,34 @@ var Node = {
   "name": "Node",
   "kind": "INTERFACE",
   "fieldBaseTypes": {},
-  "possibleTypes": ["AppliedGiftCard", "Article", "Blog", "Cart", "CartLine", "Checkout", "CheckoutLineItem", "Collection", "Comment", "ExternalVideo", "GenericFile", "Location", "MailingAddress", "MediaImage", "Menu", "MenuItem", "Metafield", "Model3d", "Order", "Page", "Payment", "Product", "ProductOption", "ProductVariant", "Shop", "ShopPolicy", "UrlRedirect", "Video"]
+  "possibleTypes": ["AppliedGiftCard", "Article", "Blog", "Cart", "CartLine", "Checkout", "CheckoutLineItem", "Collection", "Comment", "ComponentizableCartLine", "ExternalVideo", "GenericFile", "Location", "MailingAddress", "Market", "MediaImage", "MediaPresentation", "Menu", "MenuItem", "Metafield", "Metaobject", "Model3d", "Order", "Page", "Payment", "Product", "ProductOption", "ProductVariant", "Shop", "ShopPolicy", "UrlRedirect", "Video"]
 };
 
 var Order = {
   "name": "Order",
   "kind": "OBJECT",
   "fieldBaseTypes": {
-    "cancelReason": "OrderCancelReason",
-    "canceledAt": "DateTime",
     "currencyCode": "CurrencyCode",
-    "currentSubtotalPrice": "MoneyV2",
-    "currentTotalDuties": "MoneyV2",
-    "currentTotalPrice": "MoneyV2",
-    "currentTotalTax": "MoneyV2",
-    "customerLocale": "String",
     "customerUrl": "URL",
-    "edited": "Boolean",
-    "email": "String",
-    "financialStatus": "OrderFinancialStatus",
-    "fulfillmentStatus": "OrderFulfillmentStatus",
     "id": "ID",
     "lineItems": "OrderLineItemConnection",
-    "name": "String",
     "orderNumber": "Int",
-    "originalTotalDuties": "MoneyV2",
-    "originalTotalPrice": "MoneyV2",
-    "phone": "String",
     "processedAt": "DateTime",
     "shippingAddress": "MailingAddress",
-    "statusUrl": "URL",
-    "subtotalPrice": "Money",
-    "subtotalPriceV2": "MoneyV2",
-    "totalPrice": "Money",
-    "totalPriceV2": "MoneyV2",
-    "totalRefunded": "Money",
-    "totalRefundedV2": "MoneyV2",
-    "totalShippingPrice": "Money",
-    "totalShippingPriceV2": "MoneyV2",
-    "totalTax": "Money",
-    "totalTaxV2": "MoneyV2"
+    "subtotalPrice": "MoneyV2",
+    "totalPrice": "MoneyV2",
+    "totalRefunded": "MoneyV2",
+    "totalShippingPrice": "MoneyV2",
+    "totalTax": "MoneyV2"
   },
   "implementsNode": true
-};
-
-var OrderCancelReason = {
-  "name": "OrderCancelReason",
-  "kind": "ENUM"
-};
-
-var OrderConnection = {
-  "name": "OrderConnection",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "edges": "OrderEdge",
-    "pageInfo": "PageInfo"
-  },
-  "implementsNode": false
-};
-
-var OrderEdge = {
-  "name": "OrderEdge",
-  "kind": "OBJECT",
-  "fieldBaseTypes": {
-    "cursor": "String",
-    "node": "Order"
-  },
-  "implementsNode": false
-};
-
-var OrderFinancialStatus = {
-  "name": "OrderFinancialStatus",
-  "kind": "ENUM"
-};
-
-var OrderFulfillmentStatus = {
-  "name": "OrderFulfillmentStatus",
-  "kind": "ENUM"
 };
 
 var OrderLineItem = {
   "name": "OrderLineItem",
   "kind": "OBJECT",
   "fieldBaseTypes": {
-    "currentQuantity": "Int",
     "customAttributes": "Attribute",
-    "discountAllocations": "DiscountAllocation",
-    "discountedTotalPrice": "MoneyV2",
-    "originalTotalPrice": "MoneyV2",
     "quantity": "Int",
     "title": "String",
     "variant": "ProductVariant"
@@ -10426,14 +10429,11 @@ var ProductVariant = {
   "kind": "OBJECT",
   "fieldBaseTypes": {
     "availableForSale": "Boolean",
-    "compareAtPrice": "Money",
-    "compareAtPriceV2": "MoneyV2",
+    "compareAtPrice": "MoneyV2",
     "id": "ID",
     "image": "Image",
-    "price": "Money",
-    "priceV2": "MoneyV2",
+    "price": "MoneyV2",
     "product": "Product",
-    "quantityAvailable": "Int",
     "selectedOptions": "SelectedOption",
     "sku": "String",
     "title": "String",
@@ -10505,8 +10505,7 @@ var ShippingRate = {
   "kind": "OBJECT",
   "fieldBaseTypes": {
     "handle": "String",
-    "price": "Money",
-    "priceV2": "MoneyV2",
+    "price": "MoneyV2",
     "title": "String"
   },
   "implementsNode": false
@@ -10654,16 +10653,10 @@ Types.types["ImageEdge"] = ImageEdge;
 Types.types["Int"] = Int;
 Types.types["MailingAddress"] = MailingAddress;
 Types.types["ManualDiscountApplication"] = ManualDiscountApplication;
-Types.types["Money"] = Money;
 Types.types["MoneyV2"] = MoneyV2;
 Types.types["Mutation"] = Mutation$1;
 Types.types["Node"] = Node;
 Types.types["Order"] = Order;
-Types.types["OrderCancelReason"] = OrderCancelReason;
-Types.types["OrderConnection"] = OrderConnection;
-Types.types["OrderEdge"] = OrderEdge;
-Types.types["OrderFinancialStatus"] = OrderFinancialStatus;
-Types.types["OrderFulfillmentStatus"] = OrderFulfillmentStatus;
 Types.types["OrderLineItem"] = OrderLineItem;
 Types.types["OrderLineItemConnection"] = OrderLineItemConnection;
 Types.types["OrderLineItemEdge"] = OrderLineItemEdge;
@@ -10791,7 +10784,6 @@ var Client = function () {
     this.collection = new CollectionResource(this.graphQLClient);
     this.shop = new ShopResource(this.graphQLClient);
     this.checkout = new CheckoutResource(this.graphQLClient);
-    this.customer = new CustomerResource(this.graphQLClient);
     this.image = new ImageResource(this.graphQLClient);
   }
 
